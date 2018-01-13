@@ -27,7 +27,7 @@ struct WeatherService: WeatherServiceProtocol {
     
     func fetchForecast(for cityID: Int, completion: @escaping ForecastCompletion) {
         
-        guard let request = ForecastRequest(cityID:cityID , appID: appID).request else {
+        guard let request = ForecastRequest(cityID:cityID, appID: appID).request else {
             
             return completion(nil, WeatherServiceError.nilForecastRequest)  // TODO: test this case
         }
