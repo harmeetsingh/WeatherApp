@@ -162,52 +162,47 @@ extension WeatherServiceTests {
     }
 }
 
-//// MARK: fetchForecast - successful
-//
-//extension WeatherServiceTests {
-//    
-//    // TODO: Test request returned invalid data, error not nil
-//    // TODO: Test request returned invalid data, error correct value
-//    // TODO: Test request returned valid data, error nil
-//    
-//    func testFetchForecast_ValidData_ForecastsNotNil() {
-//        
-//        let testExpectation = expectation(description: "testFetchForecast_ValidData_ForecastsNotNil")
-//        
-//        let mockData = data(fromFile: "Valid_AllForecasts")
-//        let mockResponse = mockURLResponse(withStatusCode: 200)
-//        mockURLSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
-//        
-//        weatherService?.fetchForecast(for: "London", countryCode: "GB", completion: { (forecasts: [Forecast]?, error: Error?) in
-//            
-//            XCTAssertNotNil(forecasts, "forecasts should not be nil")
-//            testExpectation.fulfill()
-//        })
-//        
-//        waitForExpectations(timeout: 0.1, handler: nil)
-//    }
-//}
+// MARK: fetchForecast - successful
 
-//    func testFetchForecast_ValidData_ForecastsCorrectCount() {
-//        
-//        let testExpectation = expectation(description: "testFetchForecast_ValidData_ForecastsNotNil")
-//        
-//        let mockData = data(fromFile: "Valid_AllForecasts")
-//        let mockResponse = mockURLResponse(withStatusCode: 200)
-//        mockURLSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
-//        
-//        weatherService?.fetchForecast(for: "London", countryCode: "GB", completion: { (forecasts: [Forecast]?, error: Error?) in
-//            
-//            XCTAssertNotNil(forecasts, "forecasts should not be nil")
-//            testExpectation.fulfill()
-//        })
-//        
-//        waitForExpectations(timeout: 0.1, handler: nil)
-//    }
-//}
-//
+extension WeatherServiceTests {
+
+    func testFetchForecast_ResponseDataValid_ForecastsNotNil() {
+
+        let testExpectation = expectation(description: "testFetchForecast_ResponseDataValid_ForecastsNotNil")
+        
+        let mockResponse = urlResponse(with: 200)
+        let mockData = data(for: "ForecastRequest_ValidResposne")
+        urlSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
+
+        weatherService?.fetchForecast(for: 1234567, completion: { (forecasts: [Forecast]?, error: Error?) in
+
+            XCTAssertNotNil(forecasts, "forecasts should not be nil")
+            testExpectation.fulfill()
+        })
+
+        waitForExpectations(timeout: 0.1, handler: nil)
+    }
+
+    func testFetchForecast_ResponseDataValid_ForecastsCorrectCount() {
+        
+        let testExpectation = expectation(description: "testFetchForecast_ResponseDataValid_ForecastsCorrectCount")
+        
+        let mockResponse = urlResponse(with: 200)
+        let mockData = data(for: "ForecastRequest_ValidResposne")
+        urlSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
+        
+        weatherService?.fetchForecast(for: 1234567, completion: { (forecasts: [Forecast]?, error: Error?) in
+            
+            XCTAssertEqual(forecasts?.count, 7, "forecasts count should be 7")
+            testExpectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 0.1, handler: nil)
+    }
+}
+
 //// MARK: Helpers
-//
+
 extension WeatherServiceTests {
     
     func urlResponse(with statusCode: Int) -> URLResponse? {

@@ -41,7 +41,7 @@ extension ForecastRequestTests {
     func testForecast_Domain_CorrectValue() {
         
         let domain = forecastRequest?.domain
-        let expectedDomain = "http://api.openweathermap.org"
+        let expectedDomain = "https://api.openweathermap.org"
         
         XCTAssertEqual(domain, expectedDomain, "domain and expectedDomain should be the same value")
     }
@@ -92,9 +92,6 @@ extension ForecastRequestTests {
     }
 }
 
-// TODO: Test headers are nil
-// TODO: Test parameters are nil
-
 // MARK: request
 
 extension ForecastRequestTests {
@@ -105,7 +102,7 @@ extension ForecastRequestTests {
     func testForecast_Request_URLCorrectValue() {
         
         let requestURLString = forecastRequest?.request?.url?.absoluteString
-        let expectedURLString = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1234567&appid=a78f88499f4ad371151071ae9cf48f00&units=metric"
+        let expectedURLString = "https://api.openweathermap.org/data/2.5/forecast/daily?id=1234567&appid=a78f88499f4ad371151071ae9cf48f00&units=metric"
         
         XCTAssertEqual(requestURLString, expectedURLString, "requestURLString and expectedURLString should be the same value")
     }
