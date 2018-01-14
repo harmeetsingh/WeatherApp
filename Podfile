@@ -11,13 +11,9 @@ target 'WeatherApp' do
     pod "Pastel"
 	
   target 'WeatherAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
-  target 'WeatherAppUITests' do
     inherit! :search_paths
-    # Pods for testing
+    pod "SuperSession", :path => "External/"
   end
 
 end
