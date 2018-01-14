@@ -12,7 +12,7 @@ extension NSObject {
     
     // MARK: Typealias
     
-    typealias DataTaskResponse = (data: Data?, response: URLResponse?, error: NSError?)
-    typealias UploadTaskResponse = (data: Data?, response: URLResponse?, error: NSError?)
-    typealias DownloadTaskResponse = (url: URL?, response: URLResponse?, error: NSError?)
+    typealias DataTaskResponse = (data: Data?, response: URLResponse?, error: Error?)
+    typealias UploadTaskResponse = (data: Data?, response: URLResponse?, error: Error?)
+    typealias DownloadTaskResponse = (url: URL?, response: URLResponse?, error: Error?)
 }

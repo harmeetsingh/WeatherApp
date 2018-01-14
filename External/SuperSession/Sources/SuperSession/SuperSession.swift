@@ -53,7 +53,7 @@ extension SuperSession {
 
 extension SuperSession {
     
-    public func stubDataTask(with data: Data?, response: URLResponse?, error: NSError?) {
+    public func stubDataTask(with data: Data?, response: URLResponse?, error: Error?) {
 
         mockDataTaskResponse = (data: data, response: response, error: error)
     }
@@ -68,7 +68,7 @@ extension SuperSession {
         mockDataTaskResponse = (data: nil, response: response, error: nil)
     }
     
-    public func stubDataTask(withError error: NSError?) {
+    public func stubDataTask(withError error: Error?) {
         
         mockDataTaskResponse = (data: nil, response: nil, error: error)
     }

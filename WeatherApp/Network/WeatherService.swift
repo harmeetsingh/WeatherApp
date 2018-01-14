@@ -28,14 +28,14 @@ struct WeatherService: WeatherServiceProtocol {
     
     func fetchForecast(for cityID: Int, completion: @escaping ForecastCompletion) {
         
-        guard cityID > 0 && String(cityID).count == 6 else {
+        guard cityID > 0 && String(cityID).count == 7 else {
             
             return completion(nil, WeatherServiceError.cityIDInvalidValue)
         }
         
         guard let request = ForecastRequest(cityID:cityID, appID: appID).request else {
             
-            return completion(nil, WeatherServiceError.nilForecastRequest)  // TODO: test this case
+            return completion(nil, WeatherServiceError.forecastRequestNil)  // TODO: test this case
         }
         
         sendForecastRequest(with: request, completion: completion)
@@ -44,7 +44,7 @@ struct WeatherService: WeatherServiceProtocol {
 
 // MARK: Fetching forecast
 
-extension WeatherService {
+private extension WeatherService {
     
     func sendForecastRequest(with request: URLRequest, completion: @escaping ForecastCompletion) {
         
@@ -62,9 +62,9 @@ extension WeatherService {
                     let allForecasts = try self.allForecasts(from: responseData)
                     return self.forecastRequestCompleted(with: allForecasts, error: nil, completion: completion)
                     
-                } catch let error {
+                } catch let serializationError {
                     
-                    return self.forecastRequestCompleted(with: nil, error: error, completion: completion)
+                    return self.forecastRequestCompleted(with: nil, error: serializationError, completion: completion)
                 }
             }
             
@@ -93,18 +93,25 @@ extension WeatherService {
         
         guard let data = data else {
             
-            throw WeatherServiceError.nilResponseData
+            throw WeatherServiceError.responseDataNil
         }
         
-        let json = try? JSON(data: data)
-        
-        if let list = json?[Constants.ParsingKeys.ListKey].array {
+        do {
             
-            for item in list {
+            let json = try JSON(data: data)
+            
+            if let list = json[Constants.ParsingKeys.ListKey].array {
                 
-                let forecast = Forecast(with: item)
-                allForecasts.append(forecast)
+                for item in list {
+                    
+                    let forecast = Forecast(with: item)
+                    allForecasts.append(forecast)
+                }
             }
+            
+        } catch let error  {
+            
+            throw error
         }
         
         return allForecasts

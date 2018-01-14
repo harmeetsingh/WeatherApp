@@ -13,11 +13,11 @@ class DataTask: URLSessionDataTask {
     // MARK: Properties
     
     fileprivate var customResponse: DataTaskResponse?
-    fileprivate let completionHandler: ((Data?, URLResponse?, NSError?) -> Void)?
+    fileprivate let completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     
     // MARK: Instantiation
     
-    init(response: DataTaskResponse?, completionHandler: @escaping (Data?, URLResponse?, NSError?) -> Void) {
+    init(response: DataTaskResponse?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         
         self.customResponse = response
         self.completionHandler = completionHandler

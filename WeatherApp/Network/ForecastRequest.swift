@@ -25,7 +25,7 @@ struct ForecastRequest: WeatherRequestProtocol {
     
     // MARK: WeatherRequestProtocol
     
-    var domain: String = "http://api.openweathermap.org"
+    var domain: String = "https://api.openweathermap.org"
     
     var endpoint: String = "/data/2.5/forecast/daily"
     

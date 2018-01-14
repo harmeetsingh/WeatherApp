@@ -14,6 +14,6 @@ enum WeatherServiceError: Error {
     
     case requestFailed
     
-    case nilForecastRequest
-    case nilResponseData
+    case forecastRequestNil
+    case responseDataNil
 }
