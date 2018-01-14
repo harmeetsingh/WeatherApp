@@ -28,7 +28,7 @@ class ForecastRequestTests: XCTestCase {
     
     func testForecastRequest_NotNil() {
         
-        XCTAssertNotNil(forecastRequest, "weatherService mshould not be nil")
+        XCTAssertNotNil(forecastRequest, "forecastRequest mshould not be nil")
     }
 }
 
@@ -53,7 +53,7 @@ extension ForecastRequestTests {
     
     // TODO: Test forecastRequest?.endpoint not nil
     
-    func testForecast_Endpoint_CorrectValue() {
+    func testForecastRequest_Endpoint_CorrectValue() {
         
         let endpoint = forecastRequest?.endpoint
         let expectedEndpoint = "/data/2.5/forecast/daily"
@@ -68,7 +68,7 @@ extension ForecastRequestTests {
     
     // TODO: Test forecastRequest?.method not nil
     
-    func testForecast_Method_CorrectValue() {
+    func testForecastRequest_Method_CorrectValue() {
         
         let method = forecastRequest?.method.rawValue
         let expectedMethod = "GET"
@@ -83,7 +83,7 @@ extension ForecastRequestTests {
     
     // TODO: Test forecastRequest?.query not nil
     
-    func testForecast_Query_CorrectValue() {
+    func testForecastRequest_Query_CorrectValue() {
         
         let query = forecastRequest?.query
         let expectedQuery = "?id=1234567&appid=a78f88499f4ad371151071ae9cf48f00&units=metric"
@@ -99,7 +99,7 @@ extension ForecastRequestTests {
     // TODO: Test forecastRequest?.request nil when url is nil
     // TODO: Test forecastRequest?.request not nil
     
-    func testForecast_Request_URLCorrectValue() {
+    func testForecastRequest_Request_URLCorrectValue() {
         
         let requestURLString = forecastRequest?.request?.url?.absoluteString
         let expectedURLString = "https://api.openweathermap.org/data/2.5/forecast/daily?id=1234567&appid=a78f88499f4ad371151071ae9cf48f00&units=metric"
@@ -109,7 +109,7 @@ extension ForecastRequestTests {
     
     // TODO: Test forecastRequest?.request.httpMethod not nil
     
-    func testForecast_Request_HTTPMethodCorrectValue() {
+    func testForecastRequest_Request_HTTPMethodCorrectValue() {
         
         let httpMethod = forecastRequest?.request?.httpMethod
         let expectedHTTPMethod = "GET"

@@ -144,7 +144,7 @@ extension WeatherServiceTests {
         let testExpectation = expectation(description: "testFetchForecast_ResponseDataInvalidJSON_ErrorCorrectValue")
         
         let mockResponse = urlResponse(with: 200)
-        let mockData = data(for: "ForecastRequest_InvalidResponse")
+        let mockData = data(for: "ForecastRequest_InvalidResponse", className: WeatherServiceTests.self)
         urlSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
         
         weatherService?.fetchForecast(for: 1234567, completion: { (forecasts: [Forecast]?, error: Error?) in
@@ -171,7 +171,7 @@ extension WeatherServiceTests {
         let testExpectation = expectation(description: "testFetchForecast_ResponseDataValid_ForecastsNotNil")
         
         let mockResponse = urlResponse(with: 200)
-        let mockData = data(for: "ForecastRequest_ValidResposne")
+        let mockData = data(for: "ForecastRequest_ValidResposne", className: WeatherServiceTests.self)
         urlSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
 
         weatherService?.fetchForecast(for: 1234567, completion: { (forecasts: [Forecast]?, error: Error?) in
@@ -188,7 +188,7 @@ extension WeatherServiceTests {
         let testExpectation = expectation(description: "testFetchForecast_ResponseDataValid_ForecastsCorrectCount")
         
         let mockResponse = urlResponse(with: 200)
-        let mockData = data(for: "ForecastRequest_ValidResposne")
+        let mockData = data(for: "ForecastRequest_ValidResposne", className: WeatherServiceTests.self)
         urlSession.stubDataTask(with: mockData, response: mockResponse, error: nil)
         
         weatherService?.fetchForecast(for: 1234567, completion: { (forecasts: [Forecast]?, error: Error?) in
@@ -200,34 +200,3 @@ extension WeatherServiceTests {
         waitForExpectations(timeout: 0.1, handler: nil)
     }
 }
-
-//// MARK: Helpers
-
-extension WeatherServiceTests {
-    
-    func urlResponse(with statusCode: Int) -> URLResponse? {
-        
-        if let url = URL(string: "http://api.openweathermap.org") {
-            
-            return HTTPURLResponse(url: url, statusCode: statusCode, httpVersion: "1.1", headerFields: nil)
-        }
-        
-        return nil
-    }
-    
-    func data(for fileName: String) -> Data? {
-        
-        if let url = Bundle(for: WeatherServiceTests.self).url(forResource: fileName, withExtension: "json") {
-            
-            return try? Data(contentsOf: url)
-        }
-        
-        return nil
-    }
-    
-    enum MockError: Error {
-        
-        case randomError
-    }
-}
-

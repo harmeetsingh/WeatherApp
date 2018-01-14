@@ -43,7 +43,7 @@ extension Forecast: CustomStringConvertible {
 
 // MARK: Helpers
 
-fileprivate extension Forecast {
+private extension Forecast {
     
     static func date(from json: JSON) -> Date? {
         
