@@ -19,52 +19,29 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pastelView: PastelView!
     
-    let weatherService = WeatherService(urlSession: URLSession.shared)
-    var forecasts: [Forecast] = []
+    var viewModel: ForecastViewControllerViewModel!
+    
     
     // MARK: Lifeycle
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        fetchForecast(for: 2648110)
+        configureViewModel()
     }
     
-    // MARK: Fetch forecasts
+    // MARK: Configuration
     
-    func fetchForecast(for cityID: Int) {
+    func configureViewModel() {
         
-        weatherService.fetchForecast(for:cityID) { [weak self] (forecasts: [Forecast]?, error: Error?) in
-            
-            if let error = error {
-                
-                self?.displayError(with: error)
-            }
-            
-            if let forecasts = forecasts {
-            
-                self?.forecasts = forecasts
-                self?.configureTodayForecast()
-                self?.configurePatelView()
-                self?.tableView.reloadData()
-            }
-        }
+        viewModel = ForecastViewControllerViewModel(delegate: self)
+        viewModel.fetchForecast(for: 2648110)
     }
     
     func configureTodayForecast() {
         
-        let todayForecast = self.forecasts.first
-        
-        if let date = todayForecast?.date {
-            
-            dayLabel.text = date.dayOfWeek()
-        }
-        
-        if let degrees = todayForecast?.dayTemperature {
-            
-            degreesLabel.text = "\(degrees)°C"
-        }
+        dayLabel.text = viewModel.dayLabelTitle()
+        degreesLabel.text = viewModel.degreesLabelTitle()
     }
     
     func configurePatelView() {
@@ -78,9 +55,15 @@ class ForecastViewController: UIViewController {
         pastelView?.animationDuration = 3.0
         
         // Custom Color
-//        pastelView?.setPastelGradient(.frozenDreams)
+        pastelView?.setPastelGradient(.frozenDreams)
         
         pastelView?.startAnimation()
+    }
+    
+    func configureRefreshControl() {
+        
+        let refreshControl = UIRefreshControl()
+        
     }
 
     func displayError(with error: Error) {
@@ -91,26 +74,35 @@ class ForecastViewController: UIViewController {
     }
 }
 
+// MARK: ForecastViewControllerViewModelDelegate
+
+extension ForecastViewController: ForecastViewControllerViewModelDelegate {
+ 
+    func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecasts: [Forecast]) {
+        
+         configureTodayForecast()
+         configurePatelView()
+         tableView.reloadData()
+    }
+    
+    func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecastRequestError: Error) {
+        
+        displayError(with: forecastRequestError)
+    }
+}
+
 // MARK: UITableViewDataSource
 
 extension ForecastViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return forecasts.count - 1
+        return viewModel.tableView(tableView, numberOfRowsInSection: section)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "forecastTableViewCell") as? ForecastTableViewCell {
-            
-            let dailyForecast = forecasts[indexPath.row + 1]
-            cell.configure(with: dailyForecast)
-            return cell
-        }
-        
-        return UITableViewCell()
+        return viewModel.tableView(tableView, cellForRowAt: indexPath)
     }
-    
 }
 
