@@ -10,8 +10,7 @@ import Foundation
 
 enum WeatherServiceError: Error {
     
-    case cityIDInvalidLength
-    case countryCodeInvalidLength
+    case cityIDInvalidValue
     
     case requestFailed
     

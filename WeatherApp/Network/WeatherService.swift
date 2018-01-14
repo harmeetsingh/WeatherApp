@@ -14,18 +14,24 @@ struct WeatherService: WeatherServiceProtocol {
     // MARK: Properties
     
     fileprivate let urlSession: URLSession
-    private let appID: String = "a78f88499f4ad371151071ae9cf48f00"
+    let appID: String
     
     // MARK: Instantiation
     
-    init(urlSession: URLSession) {
+    init(urlSession: URLSession, appID: String = "a78f88499f4ad371151071ae9cf48f00") {
         
         self.urlSession = urlSession
+        self.appID = appID
     }
     
     // MARK: WeatherServiceProtocol
     
     func fetchForecast(for cityID: Int, completion: @escaping ForecastCompletion) {
+        
+        guard cityID > 0 && String(cityID).count == 6 else {
+            
+            return completion(nil, WeatherServiceError.cityIDInvalidValue)
+        }
         
         guard let request = ForecastRequest(cityID:cityID, appID: appID).request else {
             

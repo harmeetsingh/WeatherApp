@@ -12,5 +12,7 @@ protocol WeatherServiceProtocol {
     
     typealias ForecastCompletion = (_ forecasts: [Forecast]?, _ error: Error?) -> Void
     
+    // MARK: Methods
+    
     func fetchForecast(for cityID: Int, completion: @escaping ForecastCompletion)
 }
