@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SuperSession
 import SwiftyJSON
 
 class ForecastViewControllerViewModelTests: XCTestCase {

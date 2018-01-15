@@ -19,7 +19,8 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pastelView: PastelView!
     
-    var viewModel: ForecastViewControllerViewModel!
+    private var viewModel: ForecastViewControllerViewModel!
+    private let refreshControl = UIRefreshControl()
     
     
     // MARK: Lifeycle
@@ -35,7 +36,7 @@ class ForecastViewController: UIViewController {
     func configureViewModel() {
         
         viewModel = ForecastViewControllerViewModel(delegate: self)
-        viewModel.fetchForecast(for: 2648110)
+        fetchForecasts(self)
     }
     
     func configureTodayForecast() {
@@ -62,32 +63,36 @@ class ForecastViewController: UIViewController {
     
     func configureRefreshControl() {
         
-        let refreshControl = UIRefreshControl()
-        
+        tableView.addSubview(refreshControl)
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(fetchForecasts(_:)), for: .valueChanged)
+//        refreshControl.attributedTitle = = NSAttributedString(attributedString: "Fetching weather data...")
     }
-
-    func displayError(with error: Error) {
+    
+    // MARK: Forecast fetch
+    
+    @objc func fetchForecasts(_ sender: Any) {
         
-        cityLabel.text = ""
-        degreesLabel.text = ""
-        dayLabel.text = error.localizedDescription
+        refreshControl.beginRefreshing()
+        viewModel.fetchForecast(for: 2648110)
     }
-//}
-//
-//// MARK: ForecastViewControllerViewModelDelegate
-//
-//extension ForecastViewController: ForecastViewControllerViewModelDelegate {
+    
+    // MARK: ForecastViewControllerViewModelDelegate
  
     func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecasts: [Forecast]) {
         
-         configureTodayForecast()
-         configurePatelView()
-         tableView.reloadData()
+        configureTodayForecast()
+        configurePatelView()
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecastRequestError: Error) {
         
-        displayError(with: forecastRequestError)
+        cityLabel.text = ""
+        degreesLabel.text = ""
+        dayLabel.text = forecastRequestError.localizedDescription
+        refreshControl.endRefreshing()
     }
 }
 

@@ -13,7 +13,6 @@ target 'WeatherApp' do
   target 'WeatherAppTests' do
 
     inherit! :search_paths
-    pod "SuperSession", :path => "External/"
   end
 
 end
