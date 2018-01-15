@@ -284,12 +284,12 @@
 		6B81343E2006695000D677CF /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				6B31BB6A200B9EC1000FF293 /* ModelsTests */,
+				6BB24C94200CA62F00F7CC64 /* ViewModelTests */,
+				6B99E45A200A411E0027B50B /* NetworkTests */,
 				6B7E6624200D6F94001DEF1D /* Utilitties */,
 				6BE3C063200D16A500F22E69 /* Mocks */,
-				6BB24C94200CA62F00F7CC64 /* ViewModelTests */,
 				6B31BB70200BA288000FF293 /* Extensions */,
-				6B31BB6A200B9EC1000FF293 /* ModelsTests */,
-				6B99E45A200A411E0027B50B /* NetworkTests */,
 				6B39CD5C200B7AEF00500CCA /* Resources */,
 				6B8134472006695A00D677CF /* Supporting Files */,
 			);
