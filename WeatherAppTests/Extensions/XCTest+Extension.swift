@@ -30,8 +30,4 @@ extension XCTest {
         return nil
     }
     
-    enum MockError: Error {
-        
-        case randomError
-    }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-struct WeatherService: WeatherServiceProtocol {
+class WeatherService: WeatherServiceProtocol {
     
     // MARK: Properties
     

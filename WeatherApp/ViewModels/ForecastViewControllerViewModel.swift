@@ -13,15 +13,16 @@ class ForecastViewControllerViewModel {
     
     // MARK: Properties
     
-    let weatherService = WeatherService(urlSession: URLSession.shared)
+    var weatherService: WeatherServiceProtocol?
     var forecasts: [Forecast] = []
-    weak var delegate: ForecastViewController?
+    var delegate: ForecastViewController?
     
     // MARK: Instantiation
 
-    init(delegate: ForecastViewController) {
+    init(delegate: ForecastViewController, weatherService: WeatherServiceProtocol = WeatherService(urlSession: URLSession.shared)) {
         
         self.delegate = delegate
+        self.weatherService = weatherService
     }
 }
 
@@ -31,15 +32,14 @@ extension ForecastViewControllerViewModel {
     
     func fetchForecast(for cityID: Int) {
         
-        weatherService.fetchForecast(for:cityID) { [weak self] (forecasts: [Forecast]?, error: Error?) in
+        weatherService?.fetchForecast(for:cityID) { [weak self] (forecasts: [Forecast]?, error: Error?) in
             
             if let error = error {
                 
                 self?.delegate?.forecastViewControllerViewModel(self, forecastRequestError: error)
-            }
             
-            if let forecasts = forecasts {
-                
+            } else if let forecasts = forecasts {
+
                 self?.forecasts = forecasts
                 self?.delegate?.forecastViewControllerViewModel(self, forecasts: forecasts)
             }
@@ -67,11 +67,11 @@ extension ForecastViewControllerViewModel {
     }
 }
 
-// MARK: UITableView helpers
+// MARK: UITableView
 
 extension ForecastViewControllerViewModel {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfRows(in section: Int) -> Int {
         
         return forecasts.count - 1
     }

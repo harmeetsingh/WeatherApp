@@ -55,7 +55,7 @@ class ForecastViewController: UIViewController {
         pastelView?.animationDuration = 3.0
         
         // Custom Color
-        pastelView?.setPastelGradient(.frozenDreams)
+        pastelView?.setPastelGradient(.winterNeva)
         
         pastelView?.startAnimation()
     }
@@ -72,11 +72,11 @@ class ForecastViewController: UIViewController {
         degreesLabel.text = ""
         dayLabel.text = error.localizedDescription
     }
-}
-
-// MARK: ForecastViewControllerViewModelDelegate
-
-extension ForecastViewController: ForecastViewControllerViewModelDelegate {
+//}
+//
+//// MARK: ForecastViewControllerViewModelDelegate
+//
+//extension ForecastViewController: ForecastViewControllerViewModelDelegate {
  
     func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecasts: [Forecast]) {
         
@@ -97,7 +97,7 @@ extension ForecastViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel.tableView(tableView, numberOfRowsInSection: section)
+        return viewModel.numberOfRows(in: section)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
