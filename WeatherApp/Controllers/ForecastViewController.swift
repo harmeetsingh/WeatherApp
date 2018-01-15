@@ -29,6 +29,7 @@ class ForecastViewController: UIViewController {
         
         super.viewDidLoad()
         configureViewModel()
+        configureRefreshControl()
     }
     
     // MARK: Configuration
@@ -36,7 +37,7 @@ class ForecastViewController: UIViewController {
     func configureViewModel() {
         
         viewModel = ForecastViewControllerViewModel(delegate: self)
-        fetchForecasts(self)
+        fetchForecasts()
     }
     
     func configureTodayForecast() {
@@ -64,14 +65,14 @@ class ForecastViewController: UIViewController {
     func configureRefreshControl() {
         
         tableView.addSubview(refreshControl)
-        tableView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(fetchForecasts(_:)), for: .valueChanged)
-//        refreshControl.attributedTitle = = NSAttributedString(attributedString: "Fetching weather data...")
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.tintColor = UIColor.white
+        refreshControl.addTarget(self, action: #selector(fetchForecasts), for: .valueChanged)
     }
     
     // MARK: Forecast fetch
     
-    @objc func fetchForecasts(_ sender: Any) {
+    @objc func fetchForecasts() {
         
         refreshControl.beginRefreshing()
         viewModel.fetchForecast(for: 2648110)
