@@ -14,6 +14,9 @@
 		6B31BB72200BA29C000FF293 /* XCTest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31BB71200BA29C000FF293 /* XCTest+Extension.swift */; };
 		6B31BB73200BA90B000FF293 /* ForecastRequest_InvalidForecastItem.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B31BB6F200B9F6F000FF293 /* ForecastRequest_InvalidForecastItem.json */; };
 		6B39CD5B200B777200500CCA /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39CD5A200B777200500CCA /* Int+Extension.swift */; };
+		6B44E5ED20128B0700BAF272 /* ForecastTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44E5EC20128B0700BAF272 /* ForecastTableViewCellViewModel.swift */; };
+		6B44E5EE20128D5500BAF272 /* ForecastTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44E5EC20128B0700BAF272 /* ForecastTableViewCellViewModel.swift */; };
+		6B44E5F020128F0D00BAF272 /* ForecastTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44E5EF20128F0D00BAF272 /* ForecastTableViewCellTests.swift */; };
 		6B7E6629200D6FBE001DEF1D /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E6626200D6FBE001DEF1D /* DataTask.swift */; };
 		6B7E662A200D6FBE001DEF1D /* NSObject+SuperSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E6627200D6FBE001DEF1D /* NSObject+SuperSession.swift */; };
 		6B7E662B200D6FBE001DEF1D /* SuperSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E6628200D6FBE001DEF1D /* SuperSession.swift */; };
@@ -87,6 +90,8 @@
 		6B31BB6F200B9F6F000FF293 /* ForecastRequest_InvalidForecastItem.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ForecastRequest_InvalidForecastItem.json; sourceTree = "<group>"; };
 		6B31BB71200BA29C000FF293 /* XCTest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extension.swift"; sourceTree = "<group>"; };
 		6B39CD5A200B777200500CCA /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		6B44E5EC20128B0700BAF272 /* ForecastTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		6B44E5EF20128F0D00BAF272 /* ForecastTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCellTests.swift; sourceTree = "<group>"; };
 		6B7E6626200D6FBE001DEF1D /* DataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTask.swift; sourceTree = "<group>"; };
 		6B7E6627200D6FBE001DEF1D /* NSObject+SuperSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+SuperSession.swift"; sourceTree = "<group>"; };
 		6B7E6628200D6FBE001DEF1D /* SuperSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperSession.swift; sourceTree = "<group>"; };
@@ -337,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				6B81345F2006985400D677CF /* ForecastTableViewCell.swift */,
+				6B44E5EC20128B0700BAF272 /* ForecastTableViewCellViewModel.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				6BB24C95200CA63E00F7CC64 /* ForecastViewControllerViewModelTests.swift */,
+				6B44E5EF20128F0D00BAF272 /* ForecastTableViewCellTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -623,6 +630,7 @@
 				6BB24C8F200BCC9000F7CC64 /* ForecastViewControllerViewModel.swift in Sources */,
 				6B813416200668F100D677CF /* ForecastViewController.swift in Sources */,
 				6BD185B82006CCD000891273 /* Date+Extension.swift in Sources */,
+				6B44E5ED20128B0700BAF272 /* ForecastTableViewCellViewModel.swift in Sources */,
 				6B81344F20066AF000D677CF /* Constants+ParsingKeys.swift in Sources */,
 				6B81345D20066C0400D677CF /* ForecastRequest.swift in Sources */,
 				6B81345820066BCC00D677CF /* WeatherRequestProtocol.swift in Sources */,
@@ -655,8 +663,10 @@
 				6B7E662B200D6FBE001DEF1D /* SuperSession.swift in Sources */,
 				6B99E464200A5E9C0027B50B /* WeatherServiceTests.swift in Sources */,
 				6BE2C8C3200B703B00042DD8 /* ForecastType.swift in Sources */,
+				6B44E5EE20128D5500BAF272 /* ForecastTableViewCellViewModel.swift in Sources */,
 				6BE2C8C2200B702D00042DD8 /* Forecast.swift in Sources */,
 				6B99E45C200A41350027B50B /* ForecastRequestTests.swift in Sources */,
+				6B44E5F020128F0D00BAF272 /* ForecastTableViewCellTests.swift in Sources */,
 				6B7E662A200D6FBE001DEF1D /* NSObject+SuperSession.swift in Sources */,
 				6B99E45F200A41550027B50B /* Constants+ParsingKeys.swift in Sources */,
 				6B31BB72200BA29C000FF293 /* XCTest+Extension.swift in Sources */,

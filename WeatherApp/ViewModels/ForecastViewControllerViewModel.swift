@@ -80,8 +80,11 @@ extension ForecastViewControllerViewModel {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.ForecastTableViewCell) as? ForecastTableViewCell {
             
-            let dailyForecast = forecasts[indexPath.row + 1]
-            cell.configure(with: dailyForecast)
+            let forecast = forecasts[indexPath.row + 1]
+            let forecastCellViewModel = ForecastTableViewCellViewModel(with: forecast)
+            
+            cell.configure(with: forecastCellViewModel)
+            
             return cell
         }
         

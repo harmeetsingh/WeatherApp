@@ -18,22 +18,11 @@ class ForecastTableViewCell: UITableViewCell {
     
     // MARK: Configuration
     
-    func configure(with forecast: Forecast) {
+    func configure(with viewModel: ForecastTableViewCellViewModel) {
         
-        if let date = forecast.date {
-            
-            dayLabel.text = date.dayOfWeek()
-        }
-        
-        if let degrees = forecast.dayTemperature {
-            
-            degreesLabel.text = "\(degrees)°C"
-        }
-        
-        if let image = forecast.type?.image {
-            
-            weatherImageView.image = image
-        }
+        dayLabel.text = viewModel.dayLabelText()
+        degreesLabel.text = viewModel.degreesLabelText()
+        weatherImageView.image = viewModel.forecastImage()
     }
     
 }
