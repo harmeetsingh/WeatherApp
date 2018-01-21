@@ -57,7 +57,8 @@ class ForecastViewController: UIViewController {
         pastelView?.animationDuration = 3.0
         
         // Custom Color
-        pastelView?.setPastelGradient(.winterNeva)
+        let gradient = viewModel.pastelViewGradient()
+        pastelView?.setPastelGradient(gradient)
         
         pastelView?.startAnimation()
     }

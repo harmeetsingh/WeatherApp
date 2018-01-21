@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Pastel
 
 class ForecastViewControllerViewModel {
     
@@ -64,6 +65,12 @@ extension ForecastViewControllerViewModel {
         }
         
         return ""
+    }
+    
+    func pastelViewGradient() -> PastelGradient {
+        
+        let randomNumber = Int(arc4random_uniform(10)) + 1
+        return PastelGradient(rawValue: randomNumber)! // TODO: remove ! - bad practise
     }
 }
 
