@@ -66,7 +66,9 @@ class ForecastViewController: UIViewController {
     func configureRefreshControl() {
         
         tableView.addSubview(refreshControl)
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        
+        let attributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: attributes)
         refreshControl.tintColor = UIColor.white
         refreshControl.addTarget(self, action: #selector(fetchForecasts), for: .valueChanged)
     }

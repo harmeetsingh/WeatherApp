@@ -69,7 +69,7 @@ extension ForecastViewControllerViewModel {
     
     func pastelViewGradient() -> PastelGradient {
         
-        let randomNumber = Int(arc4random_uniform(10)) + 1
+        let randomNumber = Int(arc4random_uniform(10))
         return PastelGradient(rawValue: randomNumber)! // TODO: remove ! - bad practise
     }
 }
