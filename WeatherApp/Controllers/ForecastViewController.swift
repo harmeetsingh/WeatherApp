@@ -13,7 +13,6 @@ class ForecastViewController: UIViewController {
     
     // MARK: Properties
 
-    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var degreesLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -21,13 +20,16 @@ class ForecastViewController: UIViewController {
     
     private var viewModel: ForecastViewControllerViewModel!
     private let refreshControl = UIRefreshControl()
-    
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: Lifeycle
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        navigationItem.searchController = searchController
+        
         configureViewModel()
         configureRefreshControl()
     }
@@ -42,6 +44,7 @@ class ForecastViewController: UIViewController {
     
     func configureTodayForecast() {
         
+        navigationItem.title = viewModel.navigationItemTitle()
         dayLabel.text = viewModel.dayLabelTitle()
         degreesLabel.text = viewModel.degreesLabelTitle()
     }
@@ -93,7 +96,7 @@ class ForecastViewController: UIViewController {
     
     func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecastRequestError: Error) {
         
-        cityLabel.text = ""
+        navigationItem.title = ""
         degreesLabel.text = ""
         dayLabel.text = forecastRequestError.localizedDescription
         refreshControl.endRefreshing()

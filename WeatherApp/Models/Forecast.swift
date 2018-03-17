@@ -18,6 +18,7 @@ struct Forecast {
     let dayTemperature: Int?
     let nightTemperature: Int?
     let type: ForecastType?
+    let cityName: String?
     
     // MARK: Instantiation
     
@@ -28,6 +29,7 @@ struct Forecast {
         dayTemperature = Forecast.temperature(fromKey: Constants.ParsingKeys.DayKey, json: json)
         nightTemperature = Forecast.temperature(fromKey: Constants.ParsingKeys.NightKey, json: json)
         type = ForecastType.forecastTypeValue(for: json)
+        cityName = "Bruc"
     }
 }
 

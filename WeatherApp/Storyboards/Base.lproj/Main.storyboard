@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sc-sU-GPC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,12 +29,6 @@
                                     <constraint firstAttribute="height" constant="90" id="088-wt-ggy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="43"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3w-Mg-tiF">
-                                <rect key="frame" x="136.5" y="85" width="102.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
@@ -99,7 +93,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="T3w-Mg-tiF" firstAttribute="leading" secondItem="zfs-ib-zNo" secondAttribute="leading" id="0PK-JW-EiD"/>
                             <constraint firstItem="rYc-Yp-pX1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6ZE-Pt-EBq"/>
                             <constraint firstItem="Qoe-MO-jax" firstAttribute="trailing" secondItem="zfs-ib-zNo" secondAttribute="trailing" id="AYa-ua-xpQ"/>
                             <constraint firstItem="Qoe-MO-jax" firstAttribute="top" secondItem="zfs-ib-zNo" secondAttribute="bottom" id="II4-MH-KMm"/>
@@ -109,8 +102,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sAr-nU-RJa" secondAttribute="bottom" id="N5m-6g-OWV"/>
                             <constraint firstItem="rYc-Yp-pX1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NEx-Xv-UEs"/>
                             <constraint firstItem="sAr-nU-RJa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NfW-7d-npi"/>
-                            <constraint firstItem="T3w-Mg-tiF" firstAttribute="trailing" secondItem="zfs-ib-zNo" secondAttribute="trailing" id="O80-aR-ONi"/>
-                            <constraint firstItem="zfs-ib-zNo" firstAttribute="top" secondItem="T3w-Mg-tiF" secondAttribute="bottom" id="POT-Fo-hYV"/>
                             <constraint firstItem="sAr-nU-RJa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="fK0-hR-ooX"/>
                             <constraint firstItem="Qoe-MO-jax" firstAttribute="leading" secondItem="zfs-ib-zNo" secondAttribute="leading" id="gky-Zx-Rbt"/>
                             <constraint firstItem="rYc-Yp-pX1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kW1-nA-Rfd"/>
@@ -119,8 +110,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AfT-Zq-znZ"/>
                     <connections>
-                        <outlet property="cityLabel" destination="T3w-Mg-tiF" id="NeZ-PY-g99"/>
                         <outlet property="dayLabel" destination="Qoe-MO-jax" id="6zi-8Z-SyL"/>
                         <outlet property="degreesLabel" destination="zfs-ib-zNo" id="3f8-Gz-qKz"/>
                         <outlet property="pastelView" destination="rYc-Yp-pX1" id="2i5-0i-r0V"/>
@@ -129,7 +120,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tC2-CK-M8I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7sc-sU-GPC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cSe-p8-rFG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FEa-xQ-MnN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcN-uz-Fwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="133"/>
         </scene>
     </scenes>
     <resources>

@@ -14,9 +14,9 @@ class ForecastViewControllerViewModel {
     
     // MARK: Properties
     
-    var weatherService: WeatherServiceProtocol?
+    internal private (set) var weatherService: WeatherServiceProtocol?
     var forecasts: [Forecast] = []
-    var delegate: ForecastViewController?
+    internal private (set) var delegate: ForecastViewController?
     
     // MARK: Instantiation
 
@@ -51,6 +51,11 @@ extension ForecastViewControllerViewModel {
 // MARK: UI
 
 extension ForecastViewControllerViewModel {
+    
+    func navigationItemTitle() -> String? {
+        
+        return forecasts.first?.cityName
+    }
     
     func dayLabelTitle() -> String? {
         
