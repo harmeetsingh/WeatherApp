@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class WeatherService: WeatherServiceProtocol {
     
@@ -97,6 +96,7 @@ private extension WeatherService {
         }
         
         do {
+            
             
             let json = try JSON(data: data)
             

@@ -1,20 +1,16 @@
 PODS:
   - Pastel (0.3.0)
-  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Pastel
-  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Pastel
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: fc35153d4664a59fd9b9b1deab5a4b014649455d
+PODFILE CHECKSUM: cdf9db014b9edebf50b65067c62b991e767bc0a6
 
 COCOAPODS: 1.5.0
