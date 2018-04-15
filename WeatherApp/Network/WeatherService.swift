@@ -91,15 +91,12 @@ private extension WeatherService {
         
         do {
             
-            let json = try JSON(data: data)
+            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : Any]
             
-            if let list = json[Constants.ParsingKeys.ListKey].array {
-                
-                for item in list {
-                    
-                    let forecast = Forecast(with: item)
-                    allForecasts.append(forecast)
-                }
+            if let list = json?[Constants.ParsingKeys.ListKey] {
+             
+                let listData = try JSONSerialization.data(withJSONObject: list, options: .prettyPrinted)
+                allForecasts = try JSONDecoder().decode([Forecast].self, from: listData)
             }
             
         } catch let error  {

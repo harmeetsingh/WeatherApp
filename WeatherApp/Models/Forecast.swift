@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Forecast {
+struct Forecast: Decodable {
     
     // MARK: Properties
     
@@ -18,15 +18,47 @@ struct Forecast {
     let nightTemperature: Int?
     let type: ForecastType?
     
+    // MARK: CodingKeys
+    
+    enum ForecastCodingKeys: String, CodingKey {
+        
+        case date = "dt"
+        case weather
+        case temperature = "temp"
+    }
+    
+    enum WeatherCodingKeys: String, CodingKey {
+        
+        case title = "main"
+        case icon
+    }
+
+    enum TempreatureCodingKeys: String, CodingKey {
+        
+        case dayTemperature = "day"
+        case nightTemperature = "night"
+    }
+    
     // MARK: Instantiation
     
-    init(with json: JSON) {
+    init(from decoder: Decoder) throws {
         
-        date = Forecast.date(from: json)
-        title = Forecast.title(from: json)
-        dayTemperature = Forecast.temperature(fromKey: Constants.ParsingKeys.DayKey, json: json)
-        nightTemperature = Forecast.temperature(fromKey: Constants.ParsingKeys.NightKey, json: json)
-        type = ForecastType.forecastTypeValue(for: json)
+        let forecastContainer = try decoder.container(keyedBy: ForecastCodingKeys.self)
+        date = try forecastContainer.decodeIfPresent(Date.self, forKey: .date)
+        
+        var weatherArrayContainer = try forecastContainer.nestedUnkeyedContainer(forKey: .weather)
+        let weatherContainer = try weatherArrayContainer.nestedContainer(keyedBy: WeatherCodingKeys.self)
+        title = try weatherContainer.decodeIfPresent(String.self, forKey: .title)
+        
+        let iconName = try weatherContainer.decodeIfPresent(String.self, forKey: .icon)
+        type = ForecastType.type(from: iconName)
+        
+        let tempreatureContainer = try forecastContainer.nestedContainer(keyedBy: TempreatureCodingKeys.self, forKey: .temperature)
+        let dayTemperatureDoubleValue = try tempreatureContainer.decodeIfPresent(Double.self, forKey: .dayTemperature)
+        let nightTemperatureDoubleValue = try tempreatureContainer.decodeIfPresent(Double.self, forKey: .nightTemperature)
+        
+        dayTemperature = Int(round(dayTemperatureDoubleValue ?? 0))
+        nightTemperature = Int(round(nightTemperatureDoubleValue ?? 0))
     }
 }
 
@@ -37,45 +69,5 @@ extension Forecast: CustomStringConvertible {
     var description: String {
         
         return "Date: \(String(describing: date)) \n Title: \(String(describing: title)) \n Day Temperature \(String(describing: dayTemperature)) \n Night Temperature \(String(describing: nightTemperature)) \n Type: \(String(describing: type))"
-    }
-}
-
-// MARK: Helpers
-
-private extension Forecast {
-    
-    static func date(from json: JSON) -> Date? {
-        
-        if let epochTime = json[Constants.ParsingKeys.DateKey].double {
-            
-            return Date(timeIntervalSince1970: epochTime)
-        }
-        
-        return nil
-    }
-    
-    static func title(from json: JSON) -> String? {
-    
-        if let weather = json[Constants.ParsingKeys.WeatherKey].array?.first, let title = weather[Constants.ParsingKeys.MainKey].string {
-            
-            return title
-        }
-        
-        return nil
-    }
-    
-    static func temperature(fromKey key: String, json: JSON) -> Int? {
-        
-        if let temperatureJSON = json[Constants.ParsingKeys.TemperatureKey].dictionary {
-            
-            guard let tempreature = temperatureJSON[key]?.double else {
-                
-                return 0
-            }
-            
-            return Int(round(tempreature))
-        }
-        
-        return nil
     }
 }

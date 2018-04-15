@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ForecastType {
     
@@ -69,16 +70,10 @@ enum ForecastType {
         }
     }
     
-    static func forecastTypeValue(for json: JSON) -> ForecastType {
+    
+    static func type(from imageName: String?) -> ForecastType {
         
-        let weatherJSON = json[Constants.ParsingKeys.WeatherKey].array?.first
-        
-        guard let icon = weatherJSON?[Constants.ParsingKeys.IconKey].string else {
-            
-            return .unknown
-        }
-        
-        switch icon {
+        switch imageName {
             
         case "01d", "01n":
             
