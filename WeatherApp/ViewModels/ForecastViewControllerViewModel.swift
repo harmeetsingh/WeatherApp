@@ -13,9 +13,9 @@ class ForecastViewControllerViewModel {
     
     // MARK: Properties
     
-    var weatherService: WeatherServiceProtocol?
+    internal private (set) var weatherService: WeatherServiceProtocol?
     var forecasts: [Forecast] = []
-    var delegate: ForecastViewController?
+    internal private (set) var delegate: ForecastViewController?
     
     // MARK: Instantiation
 
