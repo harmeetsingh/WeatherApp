@@ -54,7 +54,7 @@ private extension WeatherService {
                 return self.forecastRequestCompleted(with: nil, error: error, completion: completion)
             }
             
-            if self.isRequestSuccessful(for: response) {
+            if response?.isRequestSuccessful() == true {
                 
                 do {
                     
@@ -70,12 +70,6 @@ private extension WeatherService {
             return self.forecastRequestCompleted(with: nil, error: WeatherServiceError.requestFailed, completion: completion)
             
         }.resume()
-    }
-    
-    func isRequestSuccessful(for response: URLResponse?) -> Bool {
-        
-        let httpResponse = response as? HTTPURLResponse
-        return httpResponse?.statusCode == 200
     }
     
     func forecastRequestCompleted(with forecasts: [Forecast]?, error: Error?, completion: @escaping (_ forecasts: [Forecast]?, _ error: Error?) -> Void) {
@@ -96,7 +90,6 @@ private extension WeatherService {
         }
         
         do {
-            
             
             let json = try JSON(data: data)
             
