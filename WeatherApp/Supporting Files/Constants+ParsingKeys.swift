@@ -12,13 +12,7 @@ extension Constants {
     
     struct ParsingKeys {
         
-        static let DateKey = "dt"
-        static let WeatherKey = "weather"
         static let IconKey = "icon"
-        static let MainKey = "main"
-        static let TemperatureKey = "temp"
-        static let DayKey = "day"
-        static let NightKey = "night"
         static let ListKey = "list"
     }
 }
