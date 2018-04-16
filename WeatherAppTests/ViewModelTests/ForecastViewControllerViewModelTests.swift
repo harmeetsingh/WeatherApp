@@ -112,7 +112,7 @@ extension ForecastViewControllerViewModelTests {
         configureForecasts()
         let dayText = forecastViewModel?.dayLabelTitle()
         
-        XCTAssertEqual(dayText, "Sunday", "dayText should be Sunday")
+        XCTAssertEqual(dayText, "Thursday", "dayText should be Thursday")
     }
     
     func testDegreesLabelTitle_InvalidForecast_DegreesLabelCorrectValue() {

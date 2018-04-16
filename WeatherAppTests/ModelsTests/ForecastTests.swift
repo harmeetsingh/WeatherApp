@@ -61,7 +61,7 @@ extension ForecastTests {
     
     func testInit_ValidJSON_DateCorrectValue() {
         
-        XCTAssertEqual(forecast?.date?.timeIntervalSince1970, 1515931200, "forecast date should be 1515931200")
+        XCTAssertEqual(forecast?.date?.timeIntervalSince1970, 2494238400.0, "forecast date should be 2494238400.0")
     }
 }
 
