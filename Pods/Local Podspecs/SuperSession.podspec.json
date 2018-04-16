@@ -1,0 +1,20 @@
+{
+  "name": "SuperSession",
+  "version": "0.0.1",
+  "summary": "SuperSession stubs URLSession",
+  "homepage": "https://github.com/harmeetsingh/SuperSession",
+  "license": "MIT",
+  "authors": {
+    "Harmeet Singh": "singh_120@hotmail.co.uk"
+  },
+  "source": {
+    "git": "git@github.com:harmeetsingh/SuperSession.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "requires_arc": true,
+  "source_files": "SuperSession/Sources/**/*",
+  "frameworks": "UIKit"
+}

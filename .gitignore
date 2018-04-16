@@ -1,0 +1,32 @@
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/Pastel.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/Pods-WeatherApp.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/Pods-WeatherAppTests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/SuperSession.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/SwiftyJSON.xcscheme
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-frameworks.sh
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.debug.xcconfig
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig
+Pods/Target Support Files/SuperSession/Info.plist
+Pods/Target Support Files/SuperSession/SuperSession-dummy.m
+Pods/Target Support Files/SuperSession/SuperSession-prefix.pch
+Pods/Target Support Files/SuperSession/SuperSession-umbrella.h
+Pods/Target Support Files/SuperSession/SuperSession.modulemap
+Pods/Target Support Files/SuperSession/SuperSession.xcconfig
+WeatherApp.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/WeatherApp.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/davinersingh.xcuserdatad/xcschemes/Pastel.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/davinersingh.xcuserdatad/xcschemes/Pods-WeatherApp.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/davinersingh.xcuserdatad/xcschemes/Pods-WeatherAppTests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/davinersingh.xcuserdatad/xcschemes/SwiftyJSON.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/davinersingh.xcuserdatad/xcschemes/xcschememanagement.plist
+WeatherApp.xcodeproj/xcuserdata/davinersingh.xcuserdatad/xcschemes/xcschememanagement.plist
+WeatherApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+WeatherApp.xcworkspace/xcuserdata/davinersingh.xcuserdatad/UserInterfaceState.xcuserstate
+Pods/Manifest.lock
+Pods/Target Support Files/Pastel/Pastel.xcconfig
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks.sh
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-resources.sh
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-resources.sh
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig
