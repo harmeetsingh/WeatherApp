@@ -96,7 +96,10 @@ private extension WeatherService {
             if let list = json?[Constants.ParsingKeys.ListKey] {
              
                 let listData = try JSONSerialization.data(withJSONObject: list, options: .prettyPrinted)
-                allForecasts = try JSONDecoder().decode([Forecast].self, from: listData)
+                
+                let jsonDecoder = JSONDecoder()
+                jsonDecoder.dateDecodingStrategy = .secondsSince1970
+                allForecasts = try jsonDecoder.decode([Forecast].self, from: listData)
             }
             
         } catch let error  {
