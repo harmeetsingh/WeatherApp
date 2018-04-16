@@ -22,7 +22,6 @@ class ForecastViewController: UIViewController {
     private var viewModel: ForecastViewControllerViewModel!
     private let refreshControl = UIRefreshControl()
     
-    
     // MARK: Lifeycle
     
     override func viewDidLoad() {
@@ -49,7 +48,6 @@ class ForecastViewController: UIViewController {
     func configurePatelView() {
         
         // Custom Direction
-        
         pastelView?.startPastelPoint = .bottomLeft
         pastelView?.endPastelPoint = .topRight
         
