@@ -4,10 +4,9 @@
 //
 //  Created by Harmeet Singh on 19/01/2018.
 //  Copyright © 2018 harmeetsingh. All rights reserved.
-//
+//k
 
 import XCTest
-import SwiftyJSON
 
 class ForecastTableViewCellTests: XCTestCase {
     
@@ -26,10 +25,10 @@ class ForecastTableViewCellTests: XCTestCase {
             return XCTFail("\(fileName) file not found")
         }
         
-        let json = JSON(data)
-        let forecast = Forecast(with: json)
-        
-        forecastCellViewModel = ForecastTableViewCellViewModel(with: forecast)
+        if let forecast = try? JSONDecoder().decode(Forecast.self, from: data) {
+         
+            forecastCellViewModel = ForecastTableViewCellViewModel(with: forecast)
+        }
     }
     
     override func tearDown() {

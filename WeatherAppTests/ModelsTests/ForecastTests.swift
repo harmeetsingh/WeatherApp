@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftyJSON
 
 class ForecastTests: XCTestCase {
     
@@ -40,9 +39,8 @@ class ForecastTests: XCTestCase {
 
             return XCTFail("\(fileName) file not found")
         }
-
-        let json = JSON(data)
-        forecast = Forecast(with: json)
+        
+        forecast = try? JSONDecoder().decode(Forecast.self, from: data)
     }
 }
 

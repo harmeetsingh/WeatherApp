@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftyJSON
 
 class ForecastViewControllerViewModelTests: XCTestCase {
     
@@ -185,9 +184,9 @@ extension ForecastViewControllerViewModelTests {
             return XCTFail("ForecastRequest_ValidForecastItem file not found")
         }
         
-        let json = JSON(data)
-        let forecast = Forecast(with: json)
-        
-        forecastViewModel?.forecasts.append(forecast)
+        if let forecast = try? JSONDecoder().decode(Forecast.self, from: data) {
+         
+            forecastViewModel?.forecasts.append(forecast)
+        }
     }
 }
