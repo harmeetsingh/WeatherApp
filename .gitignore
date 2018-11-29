@@ -30,3 +30,29 @@ Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig
 Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig
 Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-resources.sh
 Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig
+Podfile.lock
+Pods/Pastel/LICENSE
+Pods/Pastel/README.md
+Pods/Pastel/Pastel/Classes/PastelGradient.swift
+Pods/Pastel/Pastel/Classes/PastelLabel.swift
+Pods/Pastel/Pastel/Classes/PastelPoint.swift
+Pods/Pastel/Pastel/Classes/PastelView.swift
+Pods/Pods.xcodeproj/xcuserdata/harmeetsingh.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Target Support Files/Pastel/Info.plist
+Pods/Target Support Files/Pastel/Pastel-dummy.m
+Pods/Target Support Files/Pastel/Pastel-prefix.pch
+Pods/Target Support Files/Pastel/Pastel-umbrella.h
+Pods/Target Support Files/Pastel/Pastel.modulemap
+Pods/Target Support Files/Pods-WeatherApp/Info.plist
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-acknowledgements.markdown
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-acknowledgements.plist
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-dummy.m
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-umbrella.h
+Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.modulemap
+Pods/Target Support Files/Pods-WeatherAppTests/Info.plist
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-acknowledgements.plist
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-dummy.m
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-umbrella.h
+Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.modulemap
+WeatherApp.xcworkspace/contents.xcworkspacedata
