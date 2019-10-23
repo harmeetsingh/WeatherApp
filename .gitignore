@@ -56,3 +56,72 @@ Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-dummy.m
 Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests-umbrella.h
 Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.modulemap
 WeatherApp.xcworkspace/contents.xcworkspacedata
+Carthage/Build/.Pastel.version
+Carthage/Build/iOS/00D3A269-48EB-3003-BED9-0C46B7543658.bcsymbolmap
+Carthage/Build/iOS/354D4BC8-68EB-3975-9B06-39AFCCD7F0DC.bcsymbolmap
+Carthage/Build/iOS/Pastel.framework/.gitkeep
+Carthage/Build/iOS/Pastel.framework/Info.plist
+Carthage/Build/iOS/Pastel.framework/Pastel
+Carthage/Build/iOS/Pastel.framework.dSYM/Contents/Info.plist
+Carthage/Build/iOS/Pastel.framework.dSYM/Contents/Resources/DWARF/Pastel
+Carthage/Build/iOS/Pastel.framework/Headers/Pastel-Swift.h
+Carthage/Build/iOS/Pastel.framework/Headers/Pastel.h
+Carthage/Build/iOS/Pastel.framework/Modules/module.modulemap
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/arm.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/arm.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/arm64-apple-ios.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/arm64-apple-ios.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/arm64.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/arm64.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/armv7-apple-ios.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/armv7-apple-ios.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/armv7.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/armv7.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/i386-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/i386-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/i386.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/i386.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/x86_64.swiftdoc
+Carthage/Build/iOS/Pastel.framework/Modules/Pastel.swiftmodule/x86_64.swiftmodule
+Carthage/Checkouts/Pastel/.gitignore
+Carthage/Checkouts/Pastel/.swift-version
+Carthage/Checkouts/Pastel/.travis.yml
+Carthage/Checkouts/Pastel/LICENSE
+Carthage/Checkouts/Pastel/Pastel.podspec
+Carthage/Checkouts/Pastel/README.md
+Carthage/Checkouts/Pastel/Example/Podfile
+Carthage/Checkouts/Pastel/Example/Example for Pastel/AppDelegate.swift
+Carthage/Checkouts/Pastel/Example/Example for Pastel/ViewController.swift
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Base.lproj/LaunchScreen.xib
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Base.lproj/Main.storyboard
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Images.xcassets/Contents.json
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Images.xcassets/AppIcon.appiconset/Contents.json
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Images.xcassets/Instagram Text Logo.imageset/Contents.json
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Images.xcassets/Instagram Text Logo.imageset/Instagram Text Logo.png
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Images.xcassets/Instagram Text Logo.imageset/Instagram Text Logo@2x.png
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Images.xcassets/Instagram Text Logo.imageset/Instagram Text Logo@3x.png
+Carthage/Checkouts/Pastel/Example/Example for Pastel/Supporting Files/Info.plist
+Carthage/Checkouts/Pastel/Example/Pastel.xcodeproj/project.pbxproj
+Carthage/Checkouts/Pastel/Example/Pastel.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Pastel/Example/Pastel.xcodeproj/xcshareddata/xcschemes/Pastel-Example.xcscheme
+Carthage/Checkouts/Pastel/Example/Pastel.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Pastel/Example/Tests/Tests.swift
+Carthage/Checkouts/Pastel/Example/Tests/Supporting Files/Info.plist
+Carthage/Checkouts/Pastel/Pastel/Info.plist
+Carthage/Checkouts/Pastel/Pastel/Pastel.h
+Carthage/Checkouts/Pastel/Pastel.xcodeproj/project.pbxproj
+Carthage/Checkouts/Pastel/Pastel.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Pastel/Pastel.xcodeproj/xcshareddata/xcschemes/Pastel.xcscheme
+Carthage/Checkouts/Pastel/Pastel/Assets/.gitkeep
+Carthage/Checkouts/Pastel/Pastel/Classes/PastelGradient.swift
+Carthage/Checkouts/Pastel/Pastel/Classes/PastelLabel.swift
+Carthage/Checkouts/Pastel/Pastel/Classes/PastelPoint.swift
+Carthage/Checkouts/Pastel/Pastel/Classes/PastelView.swift
+Carthage/Checkouts/Pastel/PastelTests/Info.plist
+Carthage/Checkouts/Pastel/PastelTests/PastelTests.swift
+Carthage/Checkouts/Pastel/README/Gradient.png
+Carthage/Checkouts/Pastel/README/Pastel_01.gif
+Carthage/Checkouts/Pastel/README/Pastel_02.gif
+Carthage/Checkouts/Pastel/README/Pastel_03.gif
