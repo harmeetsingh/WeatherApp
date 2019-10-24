@@ -1,14 +1,14 @@
 import Foundation
 
 protocol CoordinatorFactoryType {
-    func makeApp() -> AppCoordinatorType
+    func makeForecast() -> ForecastCoordinatorType
 }
 
 struct CoordinatorFactory: CoordinatorFactoryType {
 
     let repository: RepositoryType
     
-    func makeApp() -> AppCoordinatorType {
-        return AppCoordinator()
+    func makeForecast() -> ForecastCoordinatorType {
+        return ForecastCoordinator()
     }
 }

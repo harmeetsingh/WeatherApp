@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let repository = Repostory()
         let coordinatorFactory = CoordinatorFactory(repository: repository)
-        let appCoordinator = coordinatorFactory.makeApp()
-        appCoordinator.start(on: window)
+        let forecastCoordinator = coordinatorFactory.makeForecast()
+        forecastCoordinator.start(on: window)
         return true
     }
 }

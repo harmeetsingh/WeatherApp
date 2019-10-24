@@ -6,8 +6,20 @@
 //  Copyright © 2019 harmeetsingh. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol ForecastCoordinator: Coordinator {
-    
+protocol ForecastCoordinatorType: Coordinator {
+
+    func start(on window: UIWindow)
 }
+
+class ForecastCoordinator: ForecastCoordinatorType {
+
+    func start(on window: UIWindow) {
+        
+        let viewController: ForecastViewController = .fromStoryboard()
+        window.rootViewController = viewController
+        window.makeKeyAndVisible()
+    }    
+}
+
