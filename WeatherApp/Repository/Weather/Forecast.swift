@@ -12,11 +12,11 @@ struct Forecast: Decodable {
     
     // MARK: Properties
     
-    let date: Date?
-    let title: String?
-    let dayTemperature: Int?
-    let nightTemperature: Int?
-    let type: ForecastType?
+    let date: Date
+    let title: String
+    let dayTemperature: Int
+    let nightTemperature: Int
+    let type: ForecastType
     
     // MARK: CodingKeys
     
@@ -44,11 +44,11 @@ struct Forecast: Decodable {
     init(from decoder: Decoder) throws {
         
         let forecastContainer = try decoder.container(keyedBy: ForecastCodingKeys.self)
-        date = try forecastContainer.decodeIfPresent(Date.self, forKey: .date)
+        date = try forecastContainer.decode(Date.self, forKey: .date)
         
         var weatherArrayContainer = try forecastContainer.nestedUnkeyedContainer(forKey: .weather)
         let weatherContainer = try weatherArrayContainer.nestedContainer(keyedBy: WeatherCodingKeys.self)
-        title = try weatherContainer.decodeIfPresent(String.self, forKey: .title)
+        title = try weatherContainer.decode(String.self, forKey: .title)
         
         let iconName = try weatherContainer.decodeIfPresent(String.self, forKey: .icon)
         type = ForecastType.type(from: iconName)

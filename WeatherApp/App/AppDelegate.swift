@@ -23,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
 
-        let repository = Repostory()
+        let networkSession = NetworkSession(session: URLSession.shared,
+                                            domain: "https://api.openweathermap.org",
+                                            appID: "a78f88499f4ad371151071ae9cf48f00")
+        let repository = Repository(network: networkSession)
         let coordinatorFactory = CoordinatorFactory(repository: repository)
         let forecastCoordinator = coordinatorFactory.makeForecast()
         forecastCoordinator.start(on: window)

@@ -35,7 +35,7 @@ class ForecastViewController: UIViewController {
     
     func configureViewModel() {
         
-        viewModel = ForecastViewControllerViewModel(delegate: self)
+//        viewModel = ForecastViewControllerViewModel(delegate: self, repository: <#WeatherRepository#>)
         fetchForecasts()
     }
     

@@ -10,9 +10,11 @@ import Foundation
 
 extension URLResponse {
     
-    func isRequestSuccessful() -> Bool {
-        
+    var isSuccessfull: Bool {
+
         let httpResponse = self as? HTTPURLResponse
-        return httpResponse?.statusCode == 200
+        let statusCode = httpResponse?.statusCode ?? 0
+        let range = Range(uncheckedBounds: (lower: 200, upper: 300))
+        return range.contains(statusCode)
     }
 }

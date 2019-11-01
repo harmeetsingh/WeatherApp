@@ -8,10 +8,15 @@
 
 import Foundation
 
-protocol RepositoryType {
+protocol RepositoryType: WeatherRepository {
 
 }
 
-class Repostory: RepositoryType {
+class Repository: RepositoryType {
 
+    let network: Network
+    
+    init(network: Network) {
+        self.network = network
+    }
 }

@@ -13,16 +13,16 @@ class ForecastViewControllerViewModel {
     
     // MARK: Properties
     
-    internal private (set) var weatherService: WeatherServiceProtocol?
+    internal private (set) var repository: WeatherRepository
     var forecasts: [Forecast] = []
     internal private (set) var delegate: ForecastViewController?
     
     // MARK: Instantiation
 
-    init(delegate: ForecastViewController, weatherService: WeatherServiceProtocol = WeatherService(urlSession: URLSession.shared)) {
-        
+    init(delegate: ForecastViewController, repository: WeatherRepository) {
+
         self.delegate = delegate
-        self.weatherService = weatherService
+        self.repository = repository
     }
 }
 
@@ -31,19 +31,19 @@ class ForecastViewControllerViewModel {
 extension ForecastViewControllerViewModel {
     
     func fetchForecast(for cityID: Int) {
-        
-        weatherService?.fetchForecast(for:cityID) { [weak self] (forecasts: [Forecast]?, error: Error?) in
-            
-            if let error = error {
-                
-                self?.delegate?.forecastViewControllerViewModel(self, forecastRequestError: error)
-            
-            } else if let forecasts = forecasts {
 
-                self?.forecasts = forecasts
-                self?.delegate?.forecastViewControllerViewModel(self, forecasts: forecasts)
-            }
-        }
+//        repository.fetchForecasts(for:cityID) { [weak self] (forecasts: [Forecast]?, error: Error?) in
+//            
+//            if let error = error {
+//                
+//                self?.delegate?.forecastViewControllerViewModel(self, forecastRequestError: error)
+//            
+//            } else if let forecasts = forecasts {
+//
+//                self?.forecasts = forecasts
+//                self?.delegate?.forecastViewControllerViewModel(self, forecasts: forecasts)
+//            }
+//        }
     }
 }
 
@@ -78,7 +78,7 @@ extension ForecastViewControllerViewModel {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.ForecastTableViewCell) as? ForecastTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Constants.Identifiers.ForecastTableViewCell") as? ForecastTableViewCell {
             
             let forecast = forecasts[indexPath.row + 1]
             let forecastCellViewModel = ForecastTableViewCellViewModel(with: forecast)
