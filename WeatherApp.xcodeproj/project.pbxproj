@@ -196,16 +196,8 @@
 				6B0646432362058300BBA12E /* ForecastCoordinator.swift */,
 				6B0646422362051900BBA12E /* View */,
 				6B0646412362050E00BBA12E /* ViewModel */,
-				6B064640236204E200BBA12E /* Model */,
 			);
 			path = Forecast;
-			sourceTree = "<group>";
-		};
-		6B064640236204E200BBA12E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		6B0646412362050E00BBA12E /* ViewModel */ = {

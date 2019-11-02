@@ -10,7 +10,7 @@ import Foundation
 
 struct Forecast: Decodable {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     let date: Date
     let title: String
@@ -18,7 +18,7 @@ struct Forecast: Decodable {
     let nightTemperature: Int
     let type: ForecastType
     
-    // MARK: CodingKeys
+    // MARK: - CodingKeys
     
     enum ForecastCodingKeys: String, CodingKey {
         
@@ -39,7 +39,7 @@ struct Forecast: Decodable {
         case nightTemperature = "night"
     }
     
-    // MARK: Instantiation
+    // MARK: - Instantiation
     
     init(from decoder: Decoder) throws {
         
@@ -62,7 +62,7 @@ struct Forecast: Decodable {
     }
 }
 
-// MARK: CustomStringConvertible
+// MARK: - CustomStringConvertible
 
 extension Forecast: CustomStringConvertible {
     

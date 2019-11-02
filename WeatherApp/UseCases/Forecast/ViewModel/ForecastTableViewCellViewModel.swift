@@ -38,7 +38,7 @@ class ForecastTableViewCellViewModel: ForecastTableViewCellViewModelType, Foreca
         if let dayOfWeek = forecast.date.dayOfWeek() {
             day.send(dayOfWeek)
         }
-
+        
         temperature.send("\(forecast.dayTemperature)°C")
         image.send(forecast.type.image)
     }
