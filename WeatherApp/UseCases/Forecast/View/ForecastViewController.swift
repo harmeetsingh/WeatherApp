@@ -13,7 +13,7 @@ import ReactiveKit
 
 class ForecastViewController: UIViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
 
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var degreesLabel: UILabel!
@@ -24,7 +24,7 @@ class ForecastViewController: UIViewController {
     var viewModel: ForecastViewControllerViewModelType!
     private let refreshControl = UIRefreshControl()
     
-    // MARK: Lifeycle
+    // MARK: - Lifeycle
     
     override func viewDidLoad() {
         
@@ -35,7 +35,7 @@ class ForecastViewController: UIViewController {
         viewModel.inputs.load()
     }
     
-    // MARK: Configuration
+    // MARK: - Configuration
 
     private func configurePatelView() {
         

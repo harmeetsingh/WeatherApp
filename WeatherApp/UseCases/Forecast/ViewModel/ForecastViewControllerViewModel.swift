@@ -35,7 +35,7 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
     var outputs: ForecastViewControllerViewModelOutput { return self }
     var inputs: ForecastViewControllerViewModelInput { return self }
 
-    // MARK: Properties
+    // MARK: - Properties
     
     private let repository: WeatherRepository
     private let greaterLondonCityId = 2648110
@@ -47,7 +47,7 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
     private(set) var isLoading: Observable<Bool> = .init(false)
     private(set) var cellViewModels: Observable<[ForecastTableViewCellViewModelType]> = .init([ForecastTableViewCellViewModelType]())
 
-    // MARK: Instantiation
+    // MARK: - Instantiation
     
     init(repository: WeatherRepository) {
         self.repository = repository
@@ -67,12 +67,12 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
                 
             case .success(let forecasts):
                 self.showErrorView.send(false)
-                self.updateUI(with: forecasts)
+                self.updateOutputs(with: forecasts)
             }
         }
     }
     
-    private func updateUI(with forecasts: [Forecast]) {
+    private func updateOutputs(with forecasts: [Forecast]) {
 
         if let dayOfWeek = forecasts.first?.date.dayOfWeek() {
             day.send(dayOfWeek)

@@ -11,13 +11,13 @@ import XCTest
 
 class MockForecastViewController: ForecastViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var forecastRequestDidFail = false
     var forecastRequestDidSucceed = false
     var expectation: XCTestExpectation?
     
-    // MARK: ForecastViewControllerViewModelDelegate
+    // MARK: - ForecastViewControllerViewModelDelegate
     
     override func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecasts: [Forecast]) {
         

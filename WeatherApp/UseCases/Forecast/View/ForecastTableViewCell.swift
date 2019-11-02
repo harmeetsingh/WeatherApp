@@ -10,7 +10,7 @@ import UIKit
 
 class ForecastTableViewCell: UITableViewCell {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var degreesLabel: UILabel!
@@ -18,7 +18,7 @@ class ForecastTableViewCell: UITableViewCell {
     
     var viewModel: ForecastTableViewCellViewModelType!
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func layoutSubviews() {
         super.layoutSubviews()

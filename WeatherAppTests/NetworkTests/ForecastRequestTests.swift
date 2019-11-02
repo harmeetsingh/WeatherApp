@@ -10,11 +10,11 @@ import XCTest
 
 class ForecastRequestTests: XCTestCase {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var forecastRequest: ForecastRequest?
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func setUp() {
         
@@ -32,7 +32,7 @@ class ForecastRequestTests: XCTestCase {
     }
 }
 
-// MARK: domain
+// MARK: - domain
 
 extension ForecastRequestTests {
     
@@ -47,7 +47,7 @@ extension ForecastRequestTests {
     }
 }
 
-// MARK: endpoint
+// MARK: - endpoint
 
 extension ForecastRequestTests {
     
@@ -62,7 +62,7 @@ extension ForecastRequestTests {
     }
 }
 
-// MARK: method
+// MARK: - method
 
 extension ForecastRequestTests {
     
@@ -77,7 +77,7 @@ extension ForecastRequestTests {
     }
 }
 
-// MARK: query
+// MARK: - query
 
 extension ForecastRequestTests {
     
@@ -92,7 +92,7 @@ extension ForecastRequestTests {
     }
 }
 
-// MARK: request
+// MARK: - request
 
 extension ForecastRequestTests {
     

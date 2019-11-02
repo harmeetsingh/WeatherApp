@@ -10,11 +10,11 @@ import XCTest
 
 class ForecastTests: XCTestCase {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var forecast: Forecast?
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func setUp() {
 
@@ -44,7 +44,7 @@ class ForecastTests: XCTestCase {
     }
 }
 
-// MARK: date
+// MARK: - date
 
 extension ForecastTests {
     
@@ -65,7 +65,7 @@ extension ForecastTests {
     }
 }
 
-// MARK: title
+// MARK: - title
 
 extension ForecastTests {
     
@@ -86,7 +86,7 @@ extension ForecastTests {
     }
 }
 
-// MARK: dayTemperature
+// MARK: - dayTemperature
 
 extension ForecastTests {
     
@@ -107,7 +107,7 @@ extension ForecastTests {
     }
 }
 
-// MARK: nightTemperature
+// MARK: - nightTemperature
 
 extension ForecastTests {
     
@@ -128,7 +128,7 @@ extension ForecastTests {
     }
 }
 
-// MARK: type
+// MARK: - type
 
 extension ForecastTests {
     

@@ -10,13 +10,13 @@ import XCTest
 
 class WeatherServiceTests: XCTestCase {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var weatherService: WeatherService?
     let urlSession = SuperSession()
     let cityID = 12345
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func setUp() {
     
@@ -34,7 +34,7 @@ class WeatherServiceTests: XCTestCase {
     }
 }
 
-// MARK: fetchForecast - validation
+// MARK: - fetchForecast - validation
 
 extension WeatherServiceTests {
     
@@ -69,7 +69,7 @@ extension WeatherServiceTests {
     }
 }
 
-// MARK: fetchForecast - unsuccessful
+// MARK: - fetchForecast - unsuccessful
 
 extension WeatherServiceTests {
     
@@ -161,7 +161,7 @@ extension WeatherServiceTests {
     }
 }
 
-// MARK: fetchForecast - successful
+// MARK: - fetchForecast - successful
 
 extension WeatherServiceTests {
 

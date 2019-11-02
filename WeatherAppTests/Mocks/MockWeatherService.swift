@@ -10,7 +10,7 @@ import Foundation
 
 class MockWeatherService: WeatherServiceProtocol {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var responseError: Error?
     var responseForecasts: [Forecast] = []

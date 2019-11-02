@@ -10,7 +10,7 @@ import Foundation
 
 extension NSObject {
     
-    // MARK: Typealias
+    // MARK: - Typealias
     
     typealias DataTaskResponse = (data: Data?, response: URLResponse?, error: Error?)
     typealias UploadTaskResponse = (data: Data?, response: URLResponse?, error: Error?)

@@ -10,13 +10,13 @@ import XCTest
 
 class ForecastViewControllerViewModelTests: XCTestCase {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     let mockForecastViewController = MockForecastViewController()
     var mockWeatherService: MockWeatherService!
     var forecastViewModel: ForecastViewControllerViewModel?
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func setUp() {
         
@@ -35,7 +35,7 @@ class ForecastViewControllerViewModelTests: XCTestCase {
     }
 }
 
-// MARK: init
+// MARK: - init
 
 extension ForecastViewControllerViewModelTests {
     
@@ -52,7 +52,7 @@ extension ForecastViewControllerViewModelTests {
     }
 }
 
-// MARK: delegate
+// MARK: - delegate
 
 extension ForecastViewControllerViewModelTests {
 
@@ -95,7 +95,7 @@ extension ForecastViewControllerViewModelTests {
     }
 }
 
-// MARK: UI
+// MARK: - UI
 
 extension ForecastViewControllerViewModelTests {
     
@@ -138,7 +138,7 @@ extension ForecastViewControllerViewModelTests {
     }
 }
 
-// MARK: UITableView
+// MARK: - UITableView
 
 extension ForecastViewControllerViewModelTests {
     
@@ -173,7 +173,7 @@ extension ForecastViewControllerViewModelTests {
 
 }
 
-// MARK: Helpers
+// MARK: - Helpers
 
 extension ForecastViewControllerViewModelTests {
     

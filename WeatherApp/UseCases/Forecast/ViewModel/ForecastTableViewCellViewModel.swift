@@ -23,7 +23,7 @@ protocol ForecastTableViewCellViewModelType {
 
 class ForecastTableViewCellViewModel: ForecastTableViewCellViewModelType, ForecastTableViewCellViewModelOutputs {
     
-    // MARK: Properties
+    // MARK:-  Properties
     
     var outputs: ForecastTableViewCellViewModelOutputs { return self }
 
@@ -31,7 +31,7 @@ class ForecastTableViewCellViewModel: ForecastTableViewCellViewModelType, Foreca
     private(set) var day: Observable<String> = .init("")
     private(set) var image: Observable<UIImage?> = .init(nil)
     
-    // MARK: Instantiation
+    // MARK: - Instantiation
     
     init(with forecast: Forecast) {
         

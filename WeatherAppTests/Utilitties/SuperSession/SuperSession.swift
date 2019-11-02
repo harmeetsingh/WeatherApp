@@ -10,13 +10,13 @@ import Foundation
 
 open class SuperSession: URLSession {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     fileprivate var mockDataTaskResponse: DataTaskResponse?
     fileprivate var mockUploadTaskResponse: UploadTaskResponse?
     fileprivate var mockDownloadTaskResponse: DownloadTaskResponse?
 
-    // MARK: Override functions
+    // MARK: - Override functions
     
     override open class var shared: SuperSession {
         
@@ -24,7 +24,7 @@ open class SuperSession: URLSession {
     }
 }
 
-// MARK: Data Tasks
+// MARK: - Data Tasks
 
 extension SuperSession {
     
@@ -49,7 +49,7 @@ extension SuperSession {
     }
 }
 
-// MARK: Data Task Stubs
+// MARK: - Data Task Stubs
 
 extension SuperSession {
     
@@ -74,7 +74,7 @@ extension SuperSession {
     }
 }
 
-// MARK: Upload Tasks
+// MARK: - Upload Tasks
 
 extension SuperSession {
     
@@ -89,7 +89,7 @@ extension SuperSession {
     }
 }
 
-// MARK: Download Tasks
+// MARK: - Download Tasks
 
 extension SuperSession {
 

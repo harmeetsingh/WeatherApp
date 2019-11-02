@@ -10,12 +10,12 @@ import Foundation
 
 class DataTask: URLSessionDataTask {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     fileprivate var customResponse: DataTaskResponse?
     fileprivate let completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     
-    // MARK: Instantiation
+    // MARK: - Instantiation
     
     init(response: DataTaskResponse?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         
@@ -24,7 +24,7 @@ class DataTask: URLSessionDataTask {
     }
 }
 
-// MARK: Override function
+// MARK: - Override function
 
 extension DataTask {
     

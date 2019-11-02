@@ -10,11 +10,11 @@ import XCTest
 
 class ForecastTableViewCellTests: XCTestCase {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var forecastCellViewModel: ForecastTableViewCellViewModel?
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func setUp() {
 

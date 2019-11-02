@@ -10,17 +10,17 @@ import Foundation
 
 struct ForecastsRequest: NetworkRequest { 
     
-    // MARK: Properties
+    // MARK: - Properties
     
     private let cityID: Int
     
-    // MARK: Instantiation
+    // MARK: - Instantiation
     
     init(cityID: Int) {
         self.cityID = cityID
     }
     
-    // MARK: NetworkRequest
+    // MARK: - NetworkRequest
     
     var endpoint: String = "/data/2.5/forecast/daily"
     
