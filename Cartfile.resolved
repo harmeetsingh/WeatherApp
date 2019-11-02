@@ -1,1 +1,4 @@
+github "DeclarativeHub/Bond" "7.6.0"
+github "DeclarativeHub/ReactiveKit" "v3.14.0"
 github "cruisediary/Pastel" "0.6.0"
+github "tonyarnold/Differ" "1.4.3"
