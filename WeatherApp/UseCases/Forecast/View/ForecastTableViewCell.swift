@@ -16,13 +16,24 @@ class ForecastTableViewCell: UITableViewCell {
     @IBOutlet weak var degreesLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     
-    // MARK: Configuration
+    var viewModel: ForecastTableViewCellViewModelType!
     
-    func configure(with viewModel: ForecastTableViewCellViewModel) {
-        
-        dayLabel.text = viewModel.dayLabelText()
-        degreesLabel.text = viewModel.degreesLabelText()
-        weatherImageView.image = viewModel.forecastImage()
+    // MARK: Lifecycle
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bind(viewModel.outputs)
     }
     
+    private func bind(_ outputs: ForecastTableViewCellViewModelOutputs) {
+
+        outputs.day
+            .bind(to: dayLabel.reactive.text)
+
+        outputs.temperature
+            .bind(to: degreesLabel.reactive.text)
+
+        outputs.image
+            .bind(to: weatherImageView.reactive.image)
+    }    
 }

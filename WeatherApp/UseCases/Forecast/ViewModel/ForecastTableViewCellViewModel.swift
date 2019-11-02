@@ -6,37 +6,40 @@
 //  Copyright © 2018 harmeetsingh. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Bond
 
-struct ForecastTableViewCellViewModel {
+protocol ForecastTableViewCellViewModelOutputs {
+
+    var temperature: Observable<String> { get }
+    var day: Observable<String> { get }
+    var image: Observable<UIImage?> { get }
+}
+
+protocol ForecastTableViewCellViewModelType { 
+    
+    var outputs: ForecastTableViewCellViewModelOutputs { get }
+} 
+
+class ForecastTableViewCellViewModel: ForecastTableViewCellViewModelType, ForecastTableViewCellViewModelOutputs {
     
     // MARK: Properties
     
-    let forecast: Forecast
+    var outputs: ForecastTableViewCellViewModelOutputs { return self }
+
+    private(set) var temperature: Observable<String> = .init("")
+    private(set) var day: Observable<String> = .init("")
+    private(set) var image: Observable<UIImage?> = .init(nil)
     
     // MARK: Instantiation
     
     init(with forecast: Forecast) {
         
-        self.forecast = forecast
-    }
-    
-    // MARK: Text
-    
-    func dayLabelText() -> String? {
-        return forecast.date.dayOfWeek()
-    }
-    
-    func degreesLabelText() -> String? {        
-        let degrees = forecast.dayTemperature
-        return "\(degrees)°C"
-    }
-    
-    // MARK: Image
-    
-    func forecastImage() -> UIImage? {        
-        let image = forecast.type.image
-        return image
+        if let dayOfWeek = forecast.date.dayOfWeek() {
+            day.send(dayOfWeek)
+        }
+
+        temperature.send("\(forecast.dayTemperature)°C")
+        image.send(forecast.type.image)
     }
 }

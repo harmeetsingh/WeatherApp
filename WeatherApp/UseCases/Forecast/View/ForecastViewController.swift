@@ -69,16 +69,23 @@ class ForecastViewController: UIViewController {
     
     private func bind(_ outputs: ForecastViewControllerViewModelOutput) {
         
-        outputs.cityLabelText
+        outputs.city
             .bind(to: cityLabel.reactive.text)
         
-        outputs.degreesLabelText
+        outputs.temperature
             .bind(to: degreesLabel.reactive.text)
         
-        outputs.dayLabalText
+        outputs.day
             .bind(to: dayLabel.reactive.text)
         
         outputs.isLoading
             .bind(to: refreshControl.reactive.refreshing)
+        
+        outputs.cellViewModels
+            .bind(to: tableView) { dataSource, indexPath, tableView in            
+                let cell = tableView.dequeueCell(of: ForecastTableViewCell.self, for: indexPath)
+                cell.viewModel = dataSource[indexPath.row]
+                return cell
+        }
     }
 }

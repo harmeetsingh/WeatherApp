@@ -11,11 +11,12 @@ import Bond
 
 protocol ForecastViewControllerViewModelOutput {
 
-    var cityLabelText: Observable<String> { get }
-    var degreesLabelText: Observable<String> { get }
-    var dayLabalText: Observable<String> { get }
+    var city: Observable<String> { get }
+    var temperature: Observable<String> { get }
+    var day: Observable<String> { get }
     var showErrorView: Observable<Bool> { get }
     var isLoading: Observable<Bool> { get }
+    var cellViewModels: Observable<[ForecastTableViewCellViewModelType]> { get }
 }
 
 protocol ForecastViewControllerViewModelInput {
@@ -39,11 +40,12 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
     private let repository: WeatherRepository
     private let greaterLondonCityId = 2648110
 
-    private(set) var cityLabelText: Observable<String> = .init("Greater London")
-    private(set) var degreesLabelText: Observable<String> = .init("")
-    private(set) var dayLabalText: Observable<String> = .init("")
+    private(set) var city: Observable<String> = .init("Greater London")
+    private(set) var temperature: Observable<String> = .init("")
+    private(set) var day: Observable<String> = .init("")
     private(set) var showErrorView: Observable<Bool> = .init(false)
     private(set) var isLoading: Observable<Bool> = .init(false)
+    private(set) var cellViewModels: Observable<[ForecastTableViewCellViewModelType]> = .init([ForecastTableViewCellViewModelType]())
 
     // MARK: Instantiation
     
@@ -52,11 +54,9 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
     }
     
     func load() {
-        
         isLoading.send(true)
-
         repository.fetchForecasts(for: greaterLondonCityId) { [weak self] result in
-            
+
             guard let self = self else { return }
             self.isLoading.send(false)
 
@@ -75,79 +75,16 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
     private func updateUI(with forecasts: [Forecast]) {
 
         if let dayOfWeek = forecasts.first?.date.dayOfWeek() {
-
-            dayLabalText.send(dayOfWeek)
+            day.send(dayOfWeek)
         }
         
         if let dayTemperature = forecasts.first?.dayTemperature {
-
-            degreesLabelText.send("\(dayTemperature)°C")
+            temperature.send("\(dayTemperature)°C")
         }
+
+        let viewModels = forecasts
+            .map { ForecastTableViewCellViewModel(with: $0) }
+        
+        cellViewModels.send(viewModels)
     }
 }
-
-// MARK: Forecast request
-
-extension ForecastViewControllerViewModel {
-    
-    func fetchForecast(for cityID: Int) {
-
-//        repository.fetchForecasts(for:cityID) { [weak self] (forecasts: [Forecast]?, error: Error?) in
-//            
-//            if let error = error {
-//                
-//                self?.delegate?.forecastViewControllerViewModel(self, forecastRequestError: error)
-//            
-//            } else if let forecasts = forecasts {
-//
-//                self?.forecasts = forecasts
-//                self?.delegate?.forecastViewControllerViewModel(self, forecasts: forecasts)
-//            }
-//        }
-    }
-}
-
-// MARK: UI
-//
-//extension ForecastViewControllerViewModel {
-//    
-//    func dayLabelTitle() -> String? {
-//        
-//        return forecasts.first?.date.dayOfWeek()
-//    }
-//    
-//    func degreesLabelTitle() -> String {
-//        
-//        if let dayTemperature = forecasts.first?.dayTemperature {
-//            
-//            return "\(dayTemperature)°C"
-//        }
-//        
-//        return ""
-//    }
-//}
-//
-//// MARK: UITableView
-//
-//extension ForecastViewControllerViewModel {
-//    
-//    func numberOfRows(in section: Int) -> Int {
-//        
-//        return forecasts.count - 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "Constants.Identifiers.ForecastTableViewCell") as? ForecastTableViewCell {
-//            
-//            let forecast = forecasts[indexPath.row + 1]
-//            let forecastCellViewModel = ForecastTableViewCellViewModel(with: forecast)
-//            
-//            cell.configure(with: forecastCellViewModel)
-//            
-//            return cell
-//        }
-//        
-//        return UITableViewCell()
-//    }
-//}
