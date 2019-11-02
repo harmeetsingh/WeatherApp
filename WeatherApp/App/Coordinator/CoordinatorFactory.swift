@@ -9,6 +9,6 @@ struct CoordinatorFactory: CoordinatorFactoryType {
     let repository: RepositoryType
     
     func makeForecast() -> ForecastCoordinatorType {
-        return ForecastCoordinator()
+        return ForecastCoordinator(repository: repository)
     }
 }

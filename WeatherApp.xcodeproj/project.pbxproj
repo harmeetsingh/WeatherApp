@@ -46,6 +46,9 @@
 		6B93F122236CC8B300BE1302 /* WeatherRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F121236CC8B300BE1302 /* WeatherRepositoryError.swift */; };
 		6B93F124236CC9AB00BE1302 /* ForecastsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F123236CC9AB00BE1302 /* ForecastsRequest.swift */; };
 		6B93F126236CCD9000BE1302 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F125236CCD9000BE1302 /* RepositoryError.swift */; };
+		6B93F12A236CDFE400BE1302 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93F127236CDFE400BE1302 /* Bond.framework */; };
+		6B93F12B236CDFE400BE1302 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93F128236CDFE400BE1302 /* ReactiveKit.framework */; };
+		6B93F12C236CDFE400BE1302 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93F129236CDFE400BE1302 /* Differ.framework */; };
 		6B99E45C200A41350027B50B /* ForecastRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B99E45B200A41350027B50B /* ForecastRequestTests.swift */; };
 		6B99E464200A5E9C0027B50B /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B99E463200A5E9C0027B50B /* WeatherServiceTests.swift */; };
 		6BB24C8F200BCC9000F7CC64 /* ForecastViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB24C8E200BCC9000F7CC64 /* ForecastViewControllerViewModel.swift */; };
@@ -121,6 +124,9 @@
 		6B93F121236CC8B300BE1302 /* WeatherRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryError.swift; sourceTree = "<group>"; };
 		6B93F123236CC9AB00BE1302 /* ForecastsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastsRequest.swift; sourceTree = "<group>"; };
 		6B93F125236CCD9000BE1302 /* RepositoryError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		6B93F127236CDFE400BE1302 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		6B93F128236CDFE400BE1302 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
+		6B93F129236CDFE400BE1302 /* Differ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differ.framework; path = Carthage/Build/iOS/Differ.framework; sourceTree = "<group>"; };
 		6B99E45B200A41350027B50B /* ForecastRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastRequestTests.swift; sourceTree = "<group>"; };
 		6B99E463200A5E9C0027B50B /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
 		6BB24C8E200BCC9000F7CC64 /* ForecastViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +146,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B93F12A236CDFE400BE1302 /* Bond.framework in Frameworks */,
+				6B93F12B236CDFE400BE1302 /* ReactiveKit.framework in Frameworks */,
+				6B93F12C236CDFE400BE1302 /* Differ.framework in Frameworks */,
 				6BCEAE552360F2D800071868 /* Pastel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +167,9 @@
 		36ADE5A296FF170A41979D5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B93F127236CDFE400BE1302 /* Bond.framework */,
+				6B93F129236CDFE400BE1302 /* Differ.framework */,
+				6B93F128236CDFE400BE1302 /* ReactiveKit.framework */,
 				6BCEAE542360F2D800071868 /* Pastel.framework */,
 				45910290004001753E940F71 /* Pods_WeatherApp.framework */,
 				57CA1F9B7DF2EDD3103B2387 /* Pods_WeatherAppTests.framework */,
@@ -591,12 +603,18 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Pastel.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differ.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
 			);
 			name = "Copy Frameworks [Carthage]";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Pastel.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differ.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Bond.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

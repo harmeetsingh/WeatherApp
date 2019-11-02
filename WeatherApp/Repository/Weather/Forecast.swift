@@ -33,7 +33,7 @@ struct Forecast: Decodable {
         case icon
     }
 
-    enum TempreatureCodingKeys: String, CodingKey {
+    enum TemperatureCodingKeys: String, CodingKey {
         
         case dayTemperature = "day"
         case nightTemperature = "night"
@@ -53,7 +53,7 @@ struct Forecast: Decodable {
         let iconName = try weatherContainer.decodeIfPresent(String.self, forKey: .icon)
         type = ForecastType.type(from: iconName)
         
-        let tempreatureContainer = try forecastContainer.nestedContainer(keyedBy: TempreatureCodingKeys.self, forKey: .temperature)
+        let tempreatureContainer = try forecastContainer.nestedContainer(keyedBy: TemperatureCodingKeys.self, forKey: .temperature)
         let dayTemperatureDoubleValue = try tempreatureContainer.decodeIfPresent(Double.self, forKey: .dayTemperature)
         let nightTemperatureDoubleValue = try tempreatureContainer.decodeIfPresent(Double.self, forKey: .nightTemperature)
         

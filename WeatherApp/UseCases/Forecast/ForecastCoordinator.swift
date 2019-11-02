@@ -14,10 +14,17 @@ protocol ForecastCoordinatorType: Coordinator {
 }
 
 class ForecastCoordinator: ForecastCoordinatorType {
+    
+    let repository: WeatherRepository
+    
+    init(repository: WeatherRepository) {
+        self.repository = repository
+    }
 
     func start(on window: UIWindow) {
         
         let viewController: ForecastViewController = .fromStoryboard()
+        viewController.viewModel = ForecastViewControllerViewModel(repository: repository)
         window.rootViewController = viewController
         window.makeKeyAndVisible()
     }    

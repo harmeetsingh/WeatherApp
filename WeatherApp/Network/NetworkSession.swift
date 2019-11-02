@@ -7,15 +7,15 @@ class NetworkSession: Network {
 
     let session: URLSession
     let domain: String
-    let appID: String
+    let appId: String
 
     // MARK: - Init
 
-    init(session: URLSession, domain: String, appID: String) {
+    init(session: URLSession, domain: String, appId: String) {
 
         self.session = session
         self.domain = domain
-        self.appID = appID
+        self.appId = appId
     }
 
     // MARK: - Load
@@ -24,7 +24,7 @@ class NetworkSession: Network {
 
         do {
 
-            let urlRequest = try request.urlRequest(with: domain, appID: appID)
+            let urlRequest = try request.urlRequest(with: domain, appID: appId)
 
             perform(request: urlRequest) { result in
 

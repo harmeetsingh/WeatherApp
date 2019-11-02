@@ -125,3 +125,372 @@ Carthage/Checkouts/Pastel/README/Gradient.png
 Carthage/Checkouts/Pastel/README/Pastel_01.gif
 Carthage/Checkouts/Pastel/README/Pastel_02.gif
 Carthage/Checkouts/Pastel/README/Pastel_03.gif
+Carthage/Build/.Bond.version
+Carthage/Build/.Differ.version
+Carthage/Build/.ReactiveKit.version
+Carthage/Build/iOS/0A6DA5C6-6FAE-311D-B6F4-D543E98C74F6.bcsymbolmap
+Carthage/Build/iOS/18D84D59-F446-3BEF-9BBD-3892EADC4E38.bcsymbolmap
+Carthage/Build/iOS/5AFDF2B4-0133-3057-A82A-C8BF3D39CA8A.bcsymbolmap
+Carthage/Build/iOS/808BE5E0-0F4F-309F-97B6-711C1D07A4D5.bcsymbolmap
+Carthage/Build/iOS/855E6014-6CD2-309D-BAB1-9654FB1F3130.bcsymbolmap
+Carthage/Build/iOS/975F2681-0A73-357E-8F40-387AF9DC30A4.bcsymbolmap
+Carthage/Build/iOS/Bond.framework/Bond
+Carthage/Build/iOS/Bond.framework/Info.plist
+Carthage/Build/iOS/Bond.framework.dSYM/Contents/Info.plist
+Carthage/Build/iOS/Bond.framework.dSYM/Contents/Resources/DWARF/Bond
+Carthage/Build/iOS/Bond.framework/Headers/BNDProtocolProxyBase.h
+Carthage/Build/iOS/Bond.framework/Headers/Bond-Swift.h
+Carthage/Build/iOS/Bond.framework/Headers/Bond.h
+Carthage/Build/iOS/Bond.framework/Modules/module.modulemap
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/arm.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/arm.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/arm64-apple-ios.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/arm64-apple-ios.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/arm64.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/arm64.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/armv7-apple-ios.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/armv7-apple-ios.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/armv7.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/armv7.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/i386-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/i386-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/i386.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/i386.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/x86_64.swiftdoc
+Carthage/Build/iOS/Bond.framework/Modules/Bond.swiftmodule/x86_64.swiftmodule
+Carthage/Build/iOS/Differ.framework/Differ
+Carthage/Build/iOS/Differ.framework/Info.plist
+Carthage/Build/iOS/Differ.framework.dSYM/Contents/Info.plist
+Carthage/Build/iOS/Differ.framework.dSYM/Contents/Resources/DWARF/Differ
+Carthage/Build/iOS/Differ.framework/Headers/Differ-Swift.h
+Carthage/Build/iOS/Differ.framework/Headers/Differ.h
+Carthage/Build/iOS/Differ.framework/Modules/module.modulemap
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/arm.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/arm.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/arm64-apple-ios.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/arm64-apple-ios.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/arm64.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/arm64.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/armv7-apple-ios.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/armv7-apple-ios.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/armv7.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/armv7.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/i386-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/i386-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/i386.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/i386.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/x86_64.swiftdoc
+Carthage/Build/iOS/Differ.framework/Modules/Differ.swiftmodule/x86_64.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Info.plist
+Carthage/Build/iOS/ReactiveKit.framework/ReactiveKit
+Carthage/Build/iOS/ReactiveKit.framework.dSYM/Contents/Info.plist
+Carthage/Build/iOS/ReactiveKit.framework.dSYM/Contents/Resources/DWARF/ReactiveKit
+Carthage/Build/iOS/ReactiveKit.framework/Headers/ReactiveKit-Swift.h
+Carthage/Build/iOS/ReactiveKit.framework/Headers/ReactiveKit.h
+Carthage/Build/iOS/ReactiveKit.framework/Modules/module.modulemap
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/arm.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/arm.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/arm64-apple-ios.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/arm64-apple-ios.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/arm64.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/arm64.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/armv7-apple-ios.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/armv7-apple-ios.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/armv7.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/armv7.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/i386-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/i386-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/i386.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/i386.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/x86_64.swiftdoc
+Carthage/Build/iOS/ReactiveKit.framework/Modules/ReactiveKit.swiftmodule/x86_64.swiftmodule
+Carthage/Checkouts/Bond/.gitignore
+Carthage/Checkouts/Bond/.swift-version
+Carthage/Checkouts/Bond/.travis.yml
+Carthage/Checkouts/Bond/Bond.podspec
+Carthage/Checkouts/Bond/Cartfile
+Carthage/Checkouts/Bond/Cartfile.resolved
+Carthage/Checkouts/Bond/LICENSE
+Carthage/Checkouts/Bond/Package.resolved
+Carthage/Checkouts/Bond/Package.swift
+Carthage/Checkouts/Bond/README.md
+Carthage/Checkouts/Bond/Bond-App/AppDelegate.swift
+Carthage/Checkouts/Bond/Bond-App/Info.plist
+Carthage/Checkouts/Bond/Bond-App/Base.lproj/LaunchScreen.storyboard
+Carthage/Checkouts/Bond/Bond.xcodeproj/project.pbxproj
+Carthage/Checkouts/Bond/Bond.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Bond/Bond.xcodeproj/project.xcworkspace/xcshareddata/Bond.xcscmblueprint
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcbaselines/16210A441D3EC474004AEDF3.xcbaseline/2B6566DC-774C-46E9-9AA2-140A493D3BC8.plist
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcbaselines/16210A441D3EC474004AEDF3.xcbaseline/40834933-4AB4-4531-A0E2-EBB68F354850.plist
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcbaselines/16210A441D3EC474004AEDF3.xcbaseline/587F205B-A2BA-4B14-94C4-44599BFB913E.plist
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcbaselines/16210A441D3EC474004AEDF3.xcbaseline/Info.plist
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcschemes/Bond-iOS.xcscheme
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcschemes/Bond-macOS.xcscheme
+Carthage/Checkouts/Bond/Bond.xcodeproj/xcshareddata/xcschemes/Bond-tvOS.xcscheme
+Carthage/Checkouts/Bond/Bond.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Bond/Bond.xcworkspace/xcshareddata/Bond.xcscmblueprint
+Carthage/Checkouts/Bond/Bond.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+Carthage/Checkouts/Bond/Documentation/Bindings.md
+Carthage/Checkouts/Bond/Documentation/DataSourceSignals.md
+Carthage/Checkouts/Bond/Documentation/Migration.md
+Carthage/Checkouts/Bond/Documentation/ObservableCollections.md
+Carthage/Checkouts/Bond/Documentation/ProtocolProxies.md
+Carthage/Checkouts/Bond/Extensions/Bond+Realm.swift
+Carthage/Checkouts/Bond/Extensions/Readme.md
+Carthage/Checkouts/Bond/Playground-iOS.playground/contents.xcplayground
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/Key Value Observing.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/Observable Collections.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/Trees.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/UICollectionView+ObservableArray2D.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/UIPickerView+ObservableArray2D.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/UITableView+ObservableArray.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/UITableView+ObservableArray2D.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-iOS.playground/Pages/UITableView+Signal+Diff.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-macOS.playground/contents.xcplayground
+Carthage/Checkouts/Bond/Playground-macOS.playground/Pages/NSOutlineView Bindings Simpler.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-macOS.playground/Pages/NSOutlineView Bindings.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Playground-macOS.playground/Pages/NSTableView Bindings.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/Bond/Sources/BNDProtocolProxyBase/BNDProtocolProxyBase.m
+Carthage/Checkouts/Bond/Sources/BNDProtocolProxyBase/include/BNDProtocolProxyBase.h
+Carthage/Checkouts/Bond/Sources/Bond/BNDInvocation.swift
+Carthage/Checkouts/Bond/Sources/Bond/Bond.swift
+Carthage/Checkouts/Bond/Sources/Bond/DynamicSubject.swift
+Carthage/Checkouts/Bond/Sources/Bond/Instantiatable.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable.swift
+Carthage/Checkouts/Bond/Sources/Bond/Property+BidirectionalMap.swift
+Carthage/Checkouts/Bond/Sources/Bond/ProtocolProxy.swift
+Carthage/Checkouts/Bond/Sources/Bond/ProtocolProxyController.swift
+Carthage/Checkouts/Bond/Sources/Bond/Signal+Heartbeat.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSAppearanceCustomization.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSButton.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSCollectionView+DataSource.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSCollectionView.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSColorWell.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSControl.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSGestureRecognizer.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSImageView.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSMenuItem.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSOutlineView+Changeset.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSOutlineView.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSPopUpButton.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSProgressIndicator.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSSegmentedControl.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSSlider.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSStatusBarButton.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSTableView+DataSource.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSTableView.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSTextField.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSTextView.swift
+Carthage/Checkouts/Bond/Sources/Bond/AppKit/NSView.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Sources/FlatDataSourceChangesetConvertible.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Sources/OutlineChangesetConvertible.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Sources/SectionedDataSourceChangesetConvertible.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/Array2D.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/Collection+Bond.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/IndexPath+Bond.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/TreeArray.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/TreeNode.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/TreeProtocol+Differ.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/TreeProtocol.swift
+Carthage/Checkouts/Bond/Sources/Bond/Data Structures/TreeView.swift
+Carthage/Checkouts/Bond/Sources/Bond/Deprecations/Deprecations.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/Changeset.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/ChangesetContainer.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionChangeset.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff+IndexPath+Differ.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff+IndexPath+Patch.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff+IndexPath.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff+Strideable+Differ.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff+Strideable+Patch.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff+Strideable.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionDiff.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionOperation+IndexPath+Undo.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionOperation+Strideable+Undo.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/OrderedCollectionOperation.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/Property+ChangesetContainerProtocol.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/Signal+ChangesetProtocol.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/TreeChangeset+Array2D.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/TreeChangeset.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/UnorderedCollectionChangeset+Dictionary.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/UnorderedCollectionChangeset+Set.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/UnorderedCollectionChangeset.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/UnorderedCollectionDiff.swift
+Carthage/Checkouts/Bond/Sources/Bond/Observable Collections/UnorderedCollectionOperation.swift
+Carthage/Checkouts/Bond/Sources/Bond/Shared/CALayer.swift
+Carthage/Checkouts/Bond/Sources/Bond/Shared/NotificationCenter.swift
+Carthage/Checkouts/Bond/Sources/Bond/Shared/NSLayoutConstraint.swift
+Carthage/Checkouts/Bond/Sources/Bond/Shared/NSObject+KVO.swift
+Carthage/Checkouts/Bond/Sources/Bond/Shared/NSObject.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIAccessibilityIdentification.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIActivityIndicatorView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIApplication.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIBarButtonItem.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIBarItem.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIButton.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UICollectionView+DataSource.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UICollectionView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIControl.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIDatePicker.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIGestureRecognizer.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIImageView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UILabel.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UINavigationBar.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UINavigationItem.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIPickerView+DataSource.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIPickerView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIProgressView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIRefreshControl.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UISearchBar.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UISegmentedControl.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UISlider.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIStepper.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UISwitch.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UITableView+DataSource.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UITableView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UITextField.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UITextView.swift
+Carthage/Checkouts/Bond/Sources/Bond/UIKit/UIView.swift
+Carthage/Checkouts/Bond/Supporting Files/Bond-Info.plist
+Carthage/Checkouts/Bond/Supporting Files/Bond.h
+Carthage/Checkouts/Bond/Supporting Files/BondTests-Info.plist
+Carthage/Checkouts/Bond/Tests/BondTests/BondTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/CollectionChangesetDiffAndPatchTest.swift
+Carthage/Checkouts/Bond/Tests/BondTests/DynamicSubjectTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/Helpers.swift
+Carthage/Checkouts/Bond/Tests/BondTests/NSObjectTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/ProtocolProxyTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/TreeChangesetDiffAndPatchTest.swift
+Carthage/Checkouts/Bond/Tests/BondTests/TreeViewTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/UICollectionViewTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/UIKitTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/UIPickerViewTests.swift
+Carthage/Checkouts/Bond/Tests/BondTests/UITableViewTests.swift
+Carthage/Checkouts/Differ/.codecov.yml
+Carthage/Checkouts/Differ/.gitignore
+Carthage/Checkouts/Differ/.travis.yml
+Carthage/Checkouts/Differ/Differ.podspec
+Carthage/Checkouts/Differ/LICENSE.md
+Carthage/Checkouts/Differ/Package.swift
+Carthage/Checkouts/Differ/README.md
+Carthage/Checkouts/Differ/.github/CODE_OF_CONDUCT.md
+Carthage/Checkouts/Differ/Differ.xcodeproj/project.pbxproj
+Carthage/Checkouts/Differ/Differ.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Differ/Differ.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+Carthage/Checkouts/Differ/Differ.xcodeproj/xcshareddata/xcbaselines/C9838FF01D29571000691BE8.xcbaseline/5ACB3D1B-D608-4861-BD7C-4E5E202E879C.plist
+Carthage/Checkouts/Differ/Differ.xcodeproj/xcshareddata/xcbaselines/C9838FF01D29571000691BE8.xcbaseline/Info.plist
+Carthage/Checkouts/Differ/Differ.xcodeproj/xcshareddata/xcschemes/Differ.xcscheme
+Carthage/Checkouts/Differ/Examples/Graph.playground/Contents.swift
+Carthage/Checkouts/Differ/Examples/Graph.playground/contents.xcplayground
+Carthage/Checkouts/Differ/Examples/Graph.playground/Sources/Arrows.swift
+Carthage/Checkouts/Differ/Examples/Graph.playground/Sources/CharacterLabels.swift
+Carthage/Checkouts/Differ/Examples/Graph.playground/Sources/GraphView.swift
+Carthage/Checkouts/Differ/Examples/Graph.playground/Sources/ViewController.swift
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/AppDelegate.swift
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/Info.plist
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/NestedTableViewController.swift
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/TableViewController.swift
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample.xcodeproj/project.pbxproj
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample.xcodeproj/xcshareddata/xcschemes/TableViewExample.xcscheme
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/Assets.xcassets/AppIcon.appiconset/Contents.json
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/Base.lproj/LaunchScreen.storyboard
+Carthage/Checkouts/Differ/Examples/TableViewExample/TableViewExample/Base.lproj/Main.storyboard
+Carthage/Checkouts/Differ/Sources/Differ/BatchUpdate.swift
+Carthage/Checkouts/Differ/Sources/Differ/Diff+AppKit.swift
+Carthage/Checkouts/Differ/Sources/Differ/Diff+UIKit.swift
+Carthage/Checkouts/Differ/Sources/Differ/Diff.swift
+Carthage/Checkouts/Differ/Sources/Differ/ExtendedDiff.swift
+Carthage/Checkouts/Differ/Sources/Differ/ExtendedPatch+Apply.swift
+Carthage/Checkouts/Differ/Sources/Differ/ExtendedPatch.swift
+Carthage/Checkouts/Differ/Sources/Differ/GenericPatch.swift
+Carthage/Checkouts/Differ/Sources/Differ/LinkedList.swift
+Carthage/Checkouts/Differ/Sources/Differ/NestedBatchUpdate.swift
+Carthage/Checkouts/Differ/Sources/Differ/NestedDiff.swift
+Carthage/Checkouts/Differ/Sources/Differ/NestedExtendedDiff.swift
+Carthage/Checkouts/Differ/Sources/Differ/Patch+Apply.swift
+Carthage/Checkouts/Differ/Sources/Differ/Patch+Sort.swift
+Carthage/Checkouts/Differ/Sources/Differ/Patch.swift
+Carthage/Checkouts/Differ/Supporting Files/Differ.h
+Carthage/Checkouts/Differ/Supporting Files/Framework-Info.plist
+Carthage/Checkouts/Differ/Supporting Files/FrameworkTests-Info.plist
+Carthage/Checkouts/Differ/Supporting Files/Configurations/Deployment-Targets.xcconfig
+Carthage/Checkouts/Differ/Supporting Files/Configurations/Universal-Framework-Target.xcconfig
+Carthage/Checkouts/Differ/Supporting Files/Configurations/Universal-Target-Base.xcconfig
+Carthage/Checkouts/Differ/Tests/DifferTests/BatchUpdateTests.swift
+Carthage/Checkouts/Differ/Tests/DifferTests/DiffTests.swift
+Carthage/Checkouts/Differ/Tests/DifferTests/ExtendedPatchSortTests.swift
+Carthage/Checkouts/Differ/Tests/DifferTests/NestedDiffTests.swift
+Carthage/Checkouts/Differ/Tests/DifferTests/NestedExtendedDiffTests.swift
+Carthage/Checkouts/Differ/Tests/DifferTests/PatchApplyTests.swift
+Carthage/Checkouts/Differ/Tests/DifferTests/PatchSortTests.swift
+Carthage/Checkouts/ReactiveKit/.gitignore
+Carthage/Checkouts/ReactiveKit/.gitmodules
+Carthage/Checkouts/ReactiveKit/.travis.yml
+Carthage/Checkouts/ReactiveKit/LICENSE
+Carthage/Checkouts/ReactiveKit/Package.swift
+Carthage/Checkouts/ReactiveKit/ReactiveKit.podspec
+Carthage/Checkouts/ReactiveKit/README.md
+Carthage/Checkouts/ReactiveKit/Assets/logo.png
+Carthage/Checkouts/ReactiveKit/Playground.playground/contents.xcplayground
+Carthage/Checkouts/ReactiveKit/Playground.playground/Pages/Creating Signals.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/ReactiveKit/Playground.playground/Pages/Exploration.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/ReactiveKit/Playground.playground/Pages/Observing Signals.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/ReactiveKit/Playground.playground/Pages/Transforming Signals.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/ReactiveKit/Playground.playground/Pages/Working with UI.xcplaygroundpage/Contents.swift
+Carthage/Checkouts/ReactiveKit/Playground.playground/Pages/Working with UI.xcplaygroundpage/timeline.xctimeline
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/project.pbxproj
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/project.xcworkspace/xcshareddata/ReactiveKit.xcscmblueprint
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcbaselines/ECBCCDD91BEB6B9B00723476.xcbaseline/15721443-CEB9-478C-919D-711F1A7CCA56.plist
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcbaselines/ECBCCDD91BEB6B9B00723476.xcbaseline/FB4F14DE-1778-47BF-9AF1-A000D430FBBA.plist
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcbaselines/ECBCCDD91BEB6B9B00723476.xcbaseline/Info.plist
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcschemes/ReactiveKit-iOS.xcscheme
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcschemes/ReactiveKit-macOS.xcscheme
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcschemes/ReactiveKit-tvOS.xcscheme
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj/xcshareddata/xcschemes/ReactiveKit-watchOS.xcscheme
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcworkspace/contents.xcworkspacedata
+Carthage/Checkouts/ReactiveKit/ReactiveKit.xcworkspace/xcshareddata/ReactiveKit.xcscmblueprint
+Carthage/Checkouts/ReactiveKit/Sources/Bindable.swift
+Carthage/Checkouts/ReactiveKit/Sources/Connectable.swift
+Carthage/Checkouts/ReactiveKit/Sources/Deallocatable.swift
+Carthage/Checkouts/ReactiveKit/Sources/Deprecations.swift
+Carthage/Checkouts/ReactiveKit/Sources/Disposable.swift
+Carthage/Checkouts/ReactiveKit/Sources/ExecutionContext.swift
+Carthage/Checkouts/ReactiveKit/Sources/LoadingProperty.swift
+Carthage/Checkouts/ReactiveKit/Sources/LoadingSignal.swift
+Carthage/Checkouts/ReactiveKit/Sources/Lock.swift
+Carthage/Checkouts/ReactiveKit/Sources/Observer.swift
+Carthage/Checkouts/ReactiveKit/Sources/Property.swift
+Carthage/Checkouts/ReactiveKit/Sources/Reactive.swift
+Carthage/Checkouts/ReactiveKit/Sources/Scheduler.swift
+Carthage/Checkouts/ReactiveKit/Sources/Signal.Event.swift
+Carthage/Checkouts/ReactiveKit/Sources/Signal.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Arities.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Combining.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+ErrorHandling.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Event.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Filtering.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Monad.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Optional.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Result.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Sequence.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Threading.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Transforming.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol+Utilities.swift
+Carthage/Checkouts/ReactiveKit/Sources/SignalProtocol.swift
+Carthage/Checkouts/ReactiveKit/Sources/Subjects.swift
+Carthage/Checkouts/ReactiveKit/Sources/Subscribers.swift
+Carthage/Checkouts/ReactiveKit/Supporting Files/Info.plist
+Carthage/Checkouts/ReactiveKit/Supporting Files/ReactiveKit.h
+Carthage/Checkouts/ReactiveKit/Supporting Files/TestsInfo.plist
+Carthage/Checkouts/ReactiveKit/Tests/LinuxMain.swift
+Carthage/Checkouts/ReactiveKit/Tests/ReactiveKitTests/Helpers.swift
+Carthage/Checkouts/ReactiveKit/Tests/ReactiveKitTests/PropertyTests.swift
+Carthage/Checkouts/ReactiveKit/Tests/ReactiveKitTests/SignalTests.swift
+Carthage/Checkouts/ReactiveKit/Tests/ReactiveKitTests/SubjectTests.swift

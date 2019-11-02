@@ -20,6 +20,7 @@ extension NetworkRequest {
         var urlComponents = URLComponents(string: domain + endpoint)
         urlComponents?.queryItems = query
             .map { URLQueryItem(name: $0.key, value: $0.value) }
+        urlComponents?.queryItems?.append(URLQueryItem(name: "appId", value: appID))
 
         guard let url = urlComponents?.url else {
             throw NetworkRequestError.nilURL

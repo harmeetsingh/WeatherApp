@@ -25,34 +25,18 @@ struct ForecastTableViewCellViewModel {
     // MARK: Text
     
     func dayLabelText() -> String? {
-        
-        if let date = forecast.date {
-
-            return date.dayOfWeek()
-        }
-        
-        return nil
+        return forecast.date.dayOfWeek()
     }
     
-    func degreesLabelText() -> String? {
-        
-        if let degrees = forecast.dayTemperature {
-
-            return "\(degrees)°C"
-        }
-        
-        return nil
+    func degreesLabelText() -> String? {        
+        let degrees = forecast.dayTemperature
+        return "\(degrees)°C"
     }
     
     // MARK: Image
     
-    func forecastImage() -> UIImage? {
-        
-        if let image = forecast.type?.image {
-
-            return image
-        }
-        
-        return nil
+    func forecastImage() -> UIImage? {        
+        let image = forecast.type.image
+        return image
     }
 }

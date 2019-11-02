@@ -8,6 +8,8 @@
 
 import UIKit
 import Pastel
+import Bond
+import ReactiveKit
 
 class ForecastViewController: UIViewController {
     
@@ -19,7 +21,7 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pastelView: PastelView!
     
-    private var viewModel: ForecastViewControllerViewModel!
+    var viewModel: ForecastViewControllerViewModelType!
     private let refreshControl = UIRefreshControl()
     
     // MARK: Lifeycle
@@ -27,25 +29,15 @@ class ForecastViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        configureViewModel()
+        configurePatelView()
         configureRefreshControl()
+        bind(viewModel.outputs)
+        viewModel.inputs.load()
     }
     
     // MARK: Configuration
-    
-    func configureViewModel() {
-        
-//        viewModel = ForecastViewControllerViewModel(delegate: self, repository: <#WeatherRepository#>)
-        fetchForecasts()
-    }
-    
-    func configureTodayForecast() {
-        
-        dayLabel.text = viewModel.dayLabelTitle()
-        degreesLabel.text = viewModel.degreesLabelTitle()
-    }
-    
-    func configurePatelView() {
+
+    private func configurePatelView() {
         
         // Custom Direction
         pastelView?.startPastelPoint = .bottomLeft
@@ -61,55 +53,32 @@ class ForecastViewController: UIViewController {
         pastelView?.startAnimation()
     }
     
-    func configureRefreshControl() {
+    private func configureRefreshControl() {
         
         tableView.addSubview(refreshControl)
         
         let attributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: attributes)
         refreshControl.tintColor = UIColor.white
-        refreshControl.addTarget(self, action: #selector(fetchForecasts), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshTriggered), for: .valueChanged)
     }
     
-    // MARK: Forecast fetch
-    
-    @objc func fetchForecasts() {
-        
-        refreshControl.beginRefreshing()
-        viewModel.fetchForecast(for: 2648110)
+    @objc private func refreshTriggered() {
+        viewModel.inputs.load()
     }
     
-    // MARK: ForecastViewControllerViewModelDelegate
- 
-    func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecasts: [Forecast]) {
+    private func bind(_ outputs: ForecastViewControllerViewModelOutput) {
         
-        configureTodayForecast()
-        configurePatelView()
-        tableView.reloadData()
-        refreshControl.endRefreshing()
-    }
-    
-    func forecastViewControllerViewModel(_ viewModel: ForecastViewControllerViewModel?, forecastRequestError: Error) {
+        outputs.cityLabelText
+            .bind(to: cityLabel.reactive.text)
         
-        cityLabel.text = ""
-        degreesLabel.text = ""
-        dayLabel.text = forecastRequestError.localizedDescription
-        refreshControl.endRefreshing()
+        outputs.degreesLabelText
+            .bind(to: degreesLabel.reactive.text)
+        
+        outputs.dayLabalText
+            .bind(to: dayLabel.reactive.text)
+        
+        outputs.isLoading
+            .bind(to: refreshControl.reactive.refreshing)
     }
 }
-
-// MARK: UITableViewDataSource
-
-extension ForecastViewController: UITableViewDataSource {
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return viewModel.numberOfRows(in: section)
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return viewModel.tableView(tableView, cellForRowAt: indexPath)
-    }
-}
-

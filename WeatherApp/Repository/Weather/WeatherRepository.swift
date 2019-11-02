@@ -22,7 +22,7 @@ extension Repository {
             completion(.failure(error))
             return
         }
-        
+
         let request = ForecastsRequest(cityID: cityID)
         let decoder = ForecastsResponseDecoder()
 
@@ -35,12 +35,12 @@ extension Repository {
 
             case .success(let decodedData):
 
-                guard let beers = decodedData as? [Forecast] else {
+                guard let forecasts = decodedData as? [Forecast] else {
                     completion(.failure(RepositoryError.unexpectedResponseType))
                     return
                 }
 
-                completion(.success(beers))
+                completion(.success(forecasts))
             }
         }
     }
