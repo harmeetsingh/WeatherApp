@@ -18,7 +18,6 @@ protocol ForecastViewControllerViewModelOutput {
 
     var city: Observable<String> { get }
     var temperature: Observable<String> { get }
-    var day: Observable<String> { get }
     var hideErrorView: Observable<Bool> { get }
     var isLoading: Observable<Bool> { get }
     var cellViewModels: Observable<[ForecastTableViewCellViewModelType]> { get }
@@ -54,7 +53,6 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
 
     private(set) var city: Observable<String> = .init("Greater London")
     private(set) var temperature: Observable<String> = .init("")
-    private(set) var day: Observable<String> = .init("")
     private(set) var hideErrorView: Observable<Bool> = .init(true)
     private(set) var isLoading: Observable<Bool> = .init(false)
     private(set) var cellViewModels: Observable<[ForecastTableViewCellViewModelType]> = .init([ForecastTableViewCellViewModelType]())
@@ -95,10 +93,6 @@ class ForecastViewControllerViewModel: ForecastViewControllerViewModelType, Fore
 
     private func updateOutputs(with forecasts: [Forecast]) {
 
-        if let dayOfWeek = forecasts.first?.date.dayOfWeek() {
-            day.send(dayOfWeek)
-        }
-        
         if let dayTemperature = forecasts.first?.dayTemperature {
             temperature.send("\(dayTemperature)°C")
         }

@@ -95,10 +95,7 @@ class ForecastViewController: UIViewController {
         
         outputs.temperature
             .bind(to: degreesLabel.reactive.text)
-        
-        outputs.day
-            .bind(to: dayLabel.reactive.text)
-        
+
         outputs.isLoading
             .bind(to: refreshControl.reactive.refreshing)
         

@@ -62,7 +62,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="O2E-tA-51C">
-                                <rect key="frame" x="173" y="575" width="68" height="50"/>
+                                <rect key="frame" x="173" y="181" width="68" height="50"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.90341065528634357" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="Kq1-ct-uQ0" firstAttribute="centerY" secondItem="Sbm-Bb-Xu1" secondAttribute="centerY" id="QQQ-LO-GmL"/>
                             <constraint firstItem="O2E-tA-51C" firstAttribute="centerX" secondItem="Sbm-Bb-Xu1" secondAttribute="centerX" id="Wi9-zE-Pkc"/>
                             <constraint firstItem="Kq1-ct-uQ0" firstAttribute="centerX" secondItem="Sbm-Bb-Xu1" secondAttribute="centerX" id="aVa-tB-bHi"/>
-                            <constraint firstItem="O2E-tA-51C" firstAttribute="top" secondItem="Kq1-ct-uQ0" secondAttribute="bottom" constant="10" id="eRQ-fO-lfD"/>
+                            <constraint firstItem="Kq1-ct-uQ0" firstAttribute="top" secondItem="O2E-tA-51C" secondAttribute="bottom" constant="100" id="v4t-QV-fya"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nLP-rv-lQb"/>
                     </view>
