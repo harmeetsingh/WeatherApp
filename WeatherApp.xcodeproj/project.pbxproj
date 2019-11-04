@@ -34,6 +34,10 @@
 		6B81345920066BCC00D677CF /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81345720066BCC00D677CF /* WeatherRepository.swift */; };
 		6B8134602006985400D677CF /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81345F2006985400D677CF /* ForecastTableViewCell.swift */; };
 		6B860FB9200D26BD00766B53 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B860FB8200D26BD00766B53 /* MockError.swift */; };
+		6B8F9F8923703AF7008A2389 /* ForecastDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F9F8823703AF7008A2389 /* ForecastDetailsCoordinator.swift */; };
+		6B8F9F8D23703B22008A2389 /* ForecastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F9F8C23703B22008A2389 /* ForecastDetailsViewController.swift */; };
+		6B8F9F8F23703B41008A2389 /* ForecastDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8F9F8E23703B41008A2389 /* ForecastDetails.storyboard */; };
+		6B8F9F9123703B94008A2389 /* ForecastDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F9F9023703B94008A2389 /* ForecastDetailsViewModel.swift */; };
 		6B93F10F236CA56A00BE1302 /* NetworkSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F0FD236CA56A00BE1302 /* NetworkSessionError.swift */; };
 		6B93F111236CA56A00BE1302 /* ForecastsResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F100236CA56A00BE1302 /* ForecastsResponseDecoder.swift */; };
 		6B93F112236CA56A00BE1302 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F101236CA56A00BE1302 /* NetworkResponseDecoder.swift */; };
@@ -114,6 +118,10 @@
 		6B81345720066BCC00D677CF /* WeatherRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		6B81345F2006985400D677CF /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		6B860FB8200D26BD00766B53 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		6B8F9F8823703AF7008A2389 /* ForecastDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailsCoordinator.swift; sourceTree = "<group>"; };
+		6B8F9F8C23703B22008A2389 /* ForecastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailsViewController.swift; sourceTree = "<group>"; };
+		6B8F9F8E23703B41008A2389 /* ForecastDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForecastDetails.storyboard; sourceTree = "<group>"; };
+		6B8F9F9023703B94008A2389 /* ForecastDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailsViewModel.swift; sourceTree = "<group>"; };
 		6B93F0FD236CA56A00BE1302 /* NetworkSessionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionError.swift; sourceTree = "<group>"; };
 		6B93F100236CA56A00BE1302 /* ForecastsResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastsResponseDecoder.swift; sourceTree = "<group>"; };
 		6B93F101236CA56A00BE1302 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				6B06463F236204C900BBA12E /* Forecast */,
+				6B8F9F8723703AD6008A2389 /* ForecastDetails */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -363,6 +372,33 @@
 				6B8134412006695000D677CF /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B8F9F8723703AD6008A2389 /* ForecastDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6B8F9F8823703AF7008A2389 /* ForecastDetailsCoordinator.swift */,
+				6B8F9F8B23703B12008A2389 /* View */,
+				6B8F9F8A23703B10008A2389 /* ViewModel */,
+			);
+			path = ForecastDetails;
+			sourceTree = "<group>";
+		};
+		6B8F9F8A23703B10008A2389 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B8F9F9023703B94008A2389 /* ForecastDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B8F9F8B23703B12008A2389 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B8F9F8C23703B22008A2389 /* ForecastDetailsViewController.swift */,
+				6B8F9F8E23703B41008A2389 /* ForecastDetails.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6B93F0D8236CA3AC00BE1302 /* Weather */ = {
@@ -556,6 +592,7 @@
 			files = (
 				6B81341E200668F100D677CF /* LaunchScreen.storyboard in Resources */,
 				6B81341B200668F100D677CF /* Assets.xcassets in Resources */,
+				6B8F9F8F23703B41008A2389 /* ForecastDetails.storyboard in Resources */,
 				6B813419200668F100D677CF /* Forecast.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,12 +686,15 @@
 				6B93F117236CA56A00BE1302 /* NetworkRequest.swift in Sources */,
 				6B06464B236205F900BBA12E /* CoordinatorFactory.swift in Sources */,
 				6B813414200668F100D677CF /* AppDelegate.swift in Sources */,
+				6B8F9F8923703AF7008A2389 /* ForecastDetailsCoordinator.swift in Sources */,
 				6B93F114236CA56A00BE1302 /* NetworkSession.swift in Sources */,
 				6B064649236205F000BBA12E /* Coordinator.swift in Sources */,
 				6B93F11A236CA56A00BE1302 /* NetworkImageRequest.swift in Sources */,
 				6B93F111236CA56A00BE1302 /* ForecastsResponseDecoder.swift in Sources */,
 				6B81344B20066A5100D677CF /* Forecast.swift in Sources */,
+				6B8F9F8D23703B22008A2389 /* ForecastDetailsViewController.swift in Sources */,
 				6B81345920066BCC00D677CF /* WeatherRepository.swift in Sources */,
+				6B8F9F9123703B94008A2389 /* ForecastDetailsViewModel.swift in Sources */,
 				6B93F112236CA56A00BE1302 /* NetworkResponseDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

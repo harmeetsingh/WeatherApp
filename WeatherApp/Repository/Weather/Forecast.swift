@@ -13,7 +13,13 @@ struct Forecast: Decodable {
     // MARK: - Properties
     
     let date: Date
+    let sunriseDate: Date
+    let sunsetDate: Date
+    let pressure: Int
+    let humidity: Int
+    let windSpeed: Double
     let title: String
+    let description: String
     let dayTemperature: Int
     let nightTemperature: Int
     let type: ForecastType
@@ -23,14 +29,14 @@ struct Forecast: Decodable {
     enum ForecastCodingKeys: String, CodingKey {
         
         case date = "dt"
-        case weather
+        case weather, sunrise, sunset, pressure, humidity, speed
         case temperature = "temp"
     }
     
     enum WeatherCodingKeys: String, CodingKey {
         
         case title = "main"
-        case icon
+        case description, icon
     }
 
     enum TemperatureCodingKeys: String, CodingKey {
@@ -45,10 +51,16 @@ struct Forecast: Decodable {
         
         let forecastContainer = try decoder.container(keyedBy: ForecastCodingKeys.self)
         date = try forecastContainer.decode(Date.self, forKey: .date)
+        sunriseDate = try forecastContainer.decode(Date.self, forKey: .sunrise)
+        sunsetDate = try forecastContainer.decode(Date.self, forKey: .sunset)
+        pressure = try forecastContainer.decode(Int.self, forKey: .pressure)
+        humidity = try forecastContainer.decode(Int.self, forKey: .humidity)
+        windSpeed = try forecastContainer.decode(Double.self, forKey: .speed)
         
         var weatherArrayContainer = try forecastContainer.nestedUnkeyedContainer(forKey: .weather)
         let weatherContainer = try weatherArrayContainer.nestedContainer(keyedBy: WeatherCodingKeys.self)
         title = try weatherContainer.decode(String.self, forKey: .title)
+        description = try weatherContainer.decode(String.self, forKey: .description)
         
         let iconName = try weatherContainer.decodeIfPresent(String.self, forKey: .icon)
         type = ForecastType.type(from: iconName)
@@ -59,15 +71,5 @@ struct Forecast: Decodable {
         
         dayTemperature = Int(round(dayTemperatureDoubleValue ?? 0))
         nightTemperature = Int(round(nightTemperatureDoubleValue ?? 0))
-    }
-}
-
-// MARK: - CustomStringConvertible
-
-extension Forecast: CustomStringConvertible {
-    
-    var description: String {
-        
-        return "Date: \(String(describing: date)) \n Title: \(String(describing: title)) \n Day Temperature \(String(describing: dayTemperature)) \n Night Temperature \(String(describing: nightTemperature)) \n Type: \(String(describing: type))"
     }
 }

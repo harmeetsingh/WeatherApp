@@ -15,14 +15,17 @@ class ForecastViewController: UIViewController {
     
     // MARK: - Properties
 
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var degreesLabel: UILabel!
-    @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var pastelView: PastelView!
+    @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var degreesLabel: UILabel!
+    @IBOutlet var dayLabel: UILabel!
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var pastelView: PastelView!
+    @IBOutlet var errorView: UIView!
+    @IBOutlet var retryButton: UIButton!
     
     var viewModel: ForecastViewControllerViewModelType!
     private let refreshControl = UIRefreshControl()
+    private let disposeBag = DisposeBag()
     
     // MARK: - Lifeycle
     
@@ -31,8 +34,9 @@ class ForecastViewController: UIViewController {
         super.viewDidLoad()
         configurePatelView()
         configureRefreshControl()
+        bind(viewModel.inputs)
         bind(viewModel.outputs)
-        viewModel.inputs.load()
+        refreshTriggered()
     }
     
     // MARK: - Configuration
@@ -45,11 +49,13 @@ class ForecastViewController: UIViewController {
         
         // Custom Duration
         pastelView?.animationDuration = 3.0
-        
+        updatePastelGradient()
+    }
+    
+    private func updatePastelGradient() {
         // Custom Color
         let gradient = PastelGradient.randomGradient()
         pastelView?.setPastelGradient(gradient)
-        
         pastelView?.startAnimation()
     }
     
@@ -65,10 +71,25 @@ class ForecastViewController: UIViewController {
     
     @objc private func refreshTriggered() {
         viewModel.inputs.load()
+        updatePastelGradient()
+    }
+    
+    private func bind(_ inputs: ForecastViewControllerViewModelInput) {
+
+        tableView.reactive.selectedRowIndexPath
+            .observe { [weak self] signal in
+                inputs.select(indexPath: signal.element)
+                self?.tableView.deselectSelectedRow()
+            }
+            .dispose(in: disposeBag)
+        
+        retryButton.reactive.tap
+            .observeNext(with: viewModel.inputs.load)
+            .dispose(in: disposeBag)
     }
     
     private func bind(_ outputs: ForecastViewControllerViewModelOutput) {
-        
+
         outputs.city
             .bind(to: cityLabel.reactive.text)
         
@@ -87,5 +108,8 @@ class ForecastViewController: UIViewController {
                 cell.viewModel = dataSource[indexPath.row]
                 return cell
         }
+        
+        outputs.hideErrorView
+            .bind(to: errorView.reactive.isHidden)
     }
 }

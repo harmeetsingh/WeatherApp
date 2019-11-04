@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Properties
 
     var window: UIWindow?
+    var forecastCoordinator: ForecastCoordinatorType?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
@@ -28,9 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                             appId: "a78f88499f4ad371151071ae9cf48f00")
         let repository = Repository(network: networkSession)
         let coordinatorFactory = CoordinatorFactory(repository: repository)
-        let forecastCoordinator = coordinatorFactory.makeForecast()
-        forecastCoordinator.start(on: window)
+        forecastCoordinator = coordinatorFactory.makeForecast()
+        forecastCoordinator?.start(on: window)
         return true
     }
 }
-
