@@ -47,13 +47,13 @@ class ForecastDetailsViewModel: ForecastDetailsViewModelType, ForecastDetailsVie
     
     init(forecast: Forecast) {
         
-        title = .init(forecast.description)
+        title = .init(forecast.description.capitalizedSentance)
         dayTemperature = .init("Day Temperature: \(forecast.dayTemperature)°C")
         nightTemperature = .init("Night Temperature: \(forecast.nightTemperature)°C")
         sunrise = .init("Sunrise: \(forecast.sunriseDate.time() ?? "")")
         sunset = .init("Sunset: \(forecast.sunsetDate.time() ?? "")")
         pressure = .init("Pressure: \(forecast.pressure) hPa")
-        humidity = .init("Humidity: \(forecast.humidity)%")
+        humidity = .init("Humidity: \(forecast.humidity) %")
         windSpeed = .init("Wind: \(forecast.windSpeed) m/s")
         image = .init(forecast.type.image)
     }

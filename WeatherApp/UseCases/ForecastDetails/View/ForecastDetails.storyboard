@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kq1-ct-uQ0">
-                                <rect key="frame" x="161" y="301" width="92.5" height="294"/>
+                                <rect key="frame" x="161" y="331" width="92.5" height="234"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-JZ-1xD">
                                         <rect key="frame" x="0.0" y="0.0" width="92.5" height="20.5"/>
@@ -59,16 +59,18 @@
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="O2E-tA-51C">
-                                        <rect key="frame" x="0.0" y="244" width="92.5" height="50"/>
-                                    </imageView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="O2E-tA-51C">
+                                <rect key="frame" x="173" y="575" width="68" height="50"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.90341065528634357" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kq1-ct-uQ0" firstAttribute="centerY" secondItem="Sbm-Bb-Xu1" secondAttribute="centerY" id="QQQ-LO-GmL"/>
+                            <constraint firstItem="O2E-tA-51C" firstAttribute="centerX" secondItem="Sbm-Bb-Xu1" secondAttribute="centerX" id="Wi9-zE-Pkc"/>
                             <constraint firstItem="Kq1-ct-uQ0" firstAttribute="centerX" secondItem="Sbm-Bb-Xu1" secondAttribute="centerX" id="aVa-tB-bHi"/>
+                            <constraint firstItem="O2E-tA-51C" firstAttribute="top" secondItem="Kq1-ct-uQ0" secondAttribute="bottom" constant="10" id="eRQ-fO-lfD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nLP-rv-lQb"/>
                     </view>

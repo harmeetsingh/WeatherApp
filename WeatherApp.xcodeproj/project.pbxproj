@@ -38,6 +38,7 @@
 		6B8F9F8D23703B22008A2389 /* ForecastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F9F8C23703B22008A2389 /* ForecastDetailsViewController.swift */; };
 		6B8F9F8F23703B41008A2389 /* ForecastDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8F9F8E23703B41008A2389 /* ForecastDetails.storyboard */; };
 		6B8F9F9123703B94008A2389 /* ForecastDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F9F9023703B94008A2389 /* ForecastDetailsViewModel.swift */; };
+		6B8F9F9523705EC3008A2389 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F9F9423705EC3008A2389 /* String+Extension.swift */; };
 		6B93F10F236CA56A00BE1302 /* NetworkSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F0FD236CA56A00BE1302 /* NetworkSessionError.swift */; };
 		6B93F111236CA56A00BE1302 /* ForecastsResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F100236CA56A00BE1302 /* ForecastsResponseDecoder.swift */; };
 		6B93F112236CA56A00BE1302 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B93F101236CA56A00BE1302 /* NetworkResponseDecoder.swift */; };
@@ -122,6 +123,7 @@
 		6B8F9F8C23703B22008A2389 /* ForecastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailsViewController.swift; sourceTree = "<group>"; };
 		6B8F9F8E23703B41008A2389 /* ForecastDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForecastDetails.storyboard; sourceTree = "<group>"; };
 		6B8F9F9023703B94008A2389 /* ForecastDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailsViewModel.swift; sourceTree = "<group>"; };
+		6B8F9F9423705EC3008A2389 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6B93F0FD236CA56A00BE1302 /* NetworkSessionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionError.swift; sourceTree = "<group>"; };
 		6B93F100236CA56A00BE1302 /* ForecastsResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastsResponseDecoder.swift; sourceTree = "<group>"; };
 		6B93F101236CA56A00BE1302 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				6B39CD5A200B777200500CCA /* Int+Extension.swift */,
 				6D42A86A2083D24500AF21A5 /* PastelGradient+Extension.swift */,
 				6D1324632083D6BB005983E6 /* URLResponse+Extension.swift */,
+				6B8F9F9423705EC3008A2389 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				6B93F124236CC9AB00BE1302 /* ForecastsRequest.swift in Sources */,
 				6B93F120236CC44600BE1302 /* NetworkRequestError.swift in Sources */,
 				6B8134602006985400D677CF /* ForecastTableViewCell.swift in Sources */,
+				6B8F9F9523705EC3008A2389 /* String+Extension.swift in Sources */,
 				6BB24C8F200BCC9000F7CC64 /* ForecastViewControllerViewModel.swift in Sources */,
 				6B813416200668F100D677CF /* ForecastViewController.swift in Sources */,
 				6B93F116236CA56A00BE1302 /* NetworkRequestType.swift in Sources */,
