@@ -63,7 +63,7 @@ struct Forecast: Decodable {
         description = try weatherContainer.decode(String.self, forKey: .description)
         
         let iconName = try weatherContainer.decodeIfPresent(String.self, forKey: .icon)
-        type = ForecastType.type(from: iconName)
+        type = ForecastType(with: iconName)
         
         let tempreatureContainer = try forecastContainer.nestedContainer(keyedBy: TemperatureCodingKeys.self, forKey: .temperature)
         let dayTemperatureDoubleValue = try tempreatureContainer.decodeIfPresent(Double.self, forKey: .dayTemperature)

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum ForecastType {
+enum ForecastType: String {
     
     case sunny
     case sunnyCloudy
@@ -22,98 +22,55 @@ enum ForecastType {
     case mist
     case unknown
     
-    // TODO: Use generics to avoid duplicate switch statements
-    
-    var image: UIImage? {
-        
-        switch self {
-            
-        case .sunny:
-            
-            return UIImage(named: "sunny")
-            
-        case .sunnyCloudy:
-            
-            return UIImage(named: "sunny-cloudy")
-            
-        case .cloudy:
-            
-            return UIImage(named: "cloudy")
-        
-        case .darkClouds:
-            
-            return UIImage(named: "dark-clouds")
-            
-        case .rainShower:
-            
-            return UIImage(named: "rain-shower")
-            
-        case .rain:
-            
-            return UIImage(named: "rain")
-            
-        case .thunderstorm:
-            
-            return UIImage(named: "thunderstorm")
+    init(with imageName: String?) {
 
-        case .snow:
-            
-            return UIImage(named: "snow")
-            
-        case .mist:
-            
-            return UIImage(named: "mist")
-        
-        default:
-            
-            return nil;
-        }
-    }
-    
-    
-    static func type(from imageName: String?) -> ForecastType {
-        
         switch imageName {
             
         case "01d", "01n":
             
-            return .sunny
+            self = .sunny
             
         case "02d", "02n":
             
-            return .sunnyCloudy
+            self = .sunnyCloudy
             
         case "03d", "03n":
             
-            return .cloudy
+            self = .cloudy
             
         case "04d", "04n":
             
-            return .darkClouds
+            self = .darkClouds
             
         case "09d", "09n":
             
-            return .rainShower
+            self = .rainShower
             
         case "10d", "10n":
             
-            return .rain
+            self = .rain
             
         case "11d", "11n":
             
-            return .thunderstorm
+            self = .thunderstorm
             
         case "13d", "13n":
             
-            return .snow
+            self = .snow
             
         case "50d", "50n":
             
-            return .mist
+            self = .mist
             
         default:
             
-            return .unknown
+            self = .unknown
         }
+    }
+
+    
+    var image: UIImage? {
+        
+        return UIImage(named: rawValue)
     }
 }

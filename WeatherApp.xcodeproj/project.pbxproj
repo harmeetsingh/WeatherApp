@@ -263,12 +263,12 @@
 			path = Forecast;
 			sourceTree = "<group>";
 		};
-		6B31BB6A200B9EC1000FF293 /* ModelsTests */ = {
+		6B31BB6A200B9EC1000FF293 /* RepositoryTests */ = {
 			isa = PBXGroup;
 			children = (
-				6B31BB6B200B9EDF000FF293 /* ForecastTests.swift */,
+				6BD707D8237459FD00E5CBF3 /* WeatherTests */,
 			);
-			path = ModelsTests;
+			path = RepositoryTests;
 			sourceTree = "<group>";
 		};
 		6B31BB70200BA288000FF293 /* Extensions */ = {
@@ -370,7 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				6B1E92BA237083F600F7EAC2 /* UseCasesTests */,
-				6B31BB6A200B9EC1000FF293 /* ModelsTests */,
+				6B31BB6A200B9EC1000FF293 /* RepositoryTests */,
 				6B99E45A200A411E0027B50B /* NetworkTests */,
 				6B7E6624200D6F94001DEF1D /* Utilitties */,
 				6BE3C063200D16A500F22E69 /* Mocks */,
@@ -498,6 +498,14 @@
 				6B8F9F9423705EC3008A2389 /* String+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6BD707D8237459FD00E5CBF3 /* WeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B31BB6B200B9EDF000FF293 /* ForecastTests.swift */,
+			);
+			path = WeatherTests;
 			sourceTree = "<group>";
 		};
 		6BE3C063200D16A500F22E69 /* Mocks */ = {
