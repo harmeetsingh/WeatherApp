@@ -7,28 +7,29 @@
 //
 
 import XCTest
+@testable import WeatherApp
 
 class ForecastRequestTests: XCTestCase {
     
     // MARK: - Properties
     
-    var forecastRequest: ForecastRequest?
+    var sut: ForecastsRequest?
     
     // MARK: - Lifecycle
     
     override func setUp() {
         
-        forecastRequest = ForecastRequest(cityID: 1234567, appID: "a78f88499f4ad371151071ae9cf48f00")
+        sut = ForecastsRequest(cityID: 1234567, appID: "a78f88499f4ad371151071ae9cf48f00")
     }
     
     override func tearDown() {
         
-        forecastRequest = nil
+        sut = nil
     }
     
     func testForecastRequest_NotNil() {
         
-        XCTAssertNotNil(forecastRequest, "forecastRequest mshould not be nil")
+        XCTAssertNotNil(sut, "forecastRequest mshould not be nil")
     }
 }
 
@@ -40,7 +41,7 @@ extension ForecastRequestTests {
     
     func testForecast_Domain_CorrectValue() {
         
-        let domain = forecastRequest?.domain
+        let domain = sut?.domain
         let expectedDomain = "https://api.openweathermap.org"
         
         XCTAssertEqual(domain, expectedDomain, "domain and expectedDomain should be the same value")
@@ -55,7 +56,7 @@ extension ForecastRequestTests {
     
     func testForecastRequest_Endpoint_CorrectValue() {
         
-        let endpoint = forecastRequest?.endpoint
+        let endpoint = sut?.endpoint
         let expectedEndpoint = "/data/2.5/forecast/daily"
         
         XCTAssertEqual(endpoint, expectedEndpoint, "endpoint and expectedEndpoint should be the same value")
@@ -70,7 +71,7 @@ extension ForecastRequestTests {
     
     func testForecastRequest_Method_CorrectValue() {
         
-        let method = forecastRequest?.method.rawValue
+        let method = sut?.method.rawValue
         let expectedMethod = "GET"
         
         XCTAssertEqual(method, expectedMethod, "method and expectedMethod should be the same value")
@@ -85,10 +86,11 @@ extension ForecastRequestTests {
     
     func testForecastRequest_Query_CorrectValue() {
         
-        let query = forecastRequest?.query
+        let query = sut?.query
         let expectedQuery = "?id=1234567&appid=a78f88499f4ad371151071ae9cf48f00&units=metric"
         
-        XCTAssertEqual(query, expectedQuery, "query and expectedQuery should be the same value")
+//        XCTAssertEqual(query, expectedQuery, "query and expectedQuery should be the same value")
+        XCTFail()
     }
 }
 
@@ -101,7 +103,7 @@ extension ForecastRequestTests {
     
     func testForecastRequest_Request_URLCorrectValue() {
         
-        let requestURLString = forecastRequest?.request?.url?.absoluteString
+        let requestURLString = try? sut?.urlRequest(with: "", appID: "").url?.absoluteString
         let expectedURLString = "https://api.openweathermap.org/data/2.5/forecast/daily?id=1234567&appid=a78f88499f4ad371151071ae9cf48f00&units=metric"
         
         XCTAssertEqual(requestURLString, expectedURLString, "requestURLString and expectedURLString should be the same value")
@@ -111,7 +113,7 @@ extension ForecastRequestTests {
     
     func testForecastRequest_Request_HTTPMethodCorrectValue() {
         
-        let httpMethod = forecastRequest?.request?.httpMethod
+        let httpMethod = sut?.method.rawValue
         let expectedHTTPMethod = "GET"
         
         XCTAssertEqual(httpMethod, expectedHTTPMethod, "httpMethod and expectedHTTPMethod should be the same value")
