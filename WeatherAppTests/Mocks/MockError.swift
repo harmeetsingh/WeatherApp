@@ -10,5 +10,5 @@ import Foundation
 
 enum MockError: Error {
     
-    case randomError
+    case instance
 }

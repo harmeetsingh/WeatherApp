@@ -10,5 +10,5 @@ import Foundation
 
 enum WeatherRepositoryError: Error {
 
-    case cityIDInvalidValue(Int)
+    case cityIdInvalidLength(Int)
 }

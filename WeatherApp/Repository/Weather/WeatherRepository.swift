@@ -17,8 +17,8 @@ extension Repository {
 
     func fetchForecasts(for cityID: Int, completion: @escaping (Result<[Forecast], Error>) -> Void) {
         
-        guard cityID > 0 && String(cityID).count == 7 else {
-            let error = WeatherRepositoryError.cityIDInvalidValue(cityID)
+        guard String(cityID).count == 7 else {
+            let error = WeatherRepositoryError.cityIdInvalidLength(cityID)
             completion(.failure(error))
             return
         }

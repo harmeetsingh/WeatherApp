@@ -18,12 +18,11 @@ class ForecastTests: XCTestCase {
     // MARK: - Lifecycle
     
     override func setUp() {
+        super.setUp()
 
-        let fileName = "ForecastRequest_ValidForecastItem"
+        guard let data = Data.from(jsonFileName: "ForecastRequest_ValidForecastItem", className: ForecastTests.self) else {
 
-        guard let data = data(for: fileName, className: ForecastTests.self) else {
-
-            return XCTFail("\(fileName) file not found")
+            return XCTFail("ForecastRequest_ValidForecastItem file not found")
         }
         
         forecast = try? JSONDecoder().decode(Forecast.self, from: data)
@@ -32,6 +31,7 @@ class ForecastTests: XCTestCase {
     override func tearDown() {
         
         forecast = nil
+        super.tearDown()
     }
     
     func testForecast_NotNil() {
